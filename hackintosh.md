@@ -161,6 +161,7 @@ DeviceProperties -> Add -> 右键 `PciRoot(0x0)/Pci(0x2,0x0)` 条目 -> 在 `Pci
 - AAPL,ig-platform-id = `00009B3E` 只支持集显，独显输出则设置为 `0300C89B`
 - `framebuffer-patch-enable` 与 `framebuffer-stolenmem` 需要 BIOS 内的 `DVMT Pre-Allocated` 少于 64MB 或者没有该选项
 
+
 Quirks -> PanicNoKextDump -> true  <br>
 Quirks -> PowerTimeoutKernelPanic -> true  <br>
 Quirks -> XhciPortLimit -> true (运行 MacOS 11.3+ 则关闭)
@@ -177,6 +178,7 @@ Misc -> Security -> Vault -> Optional
 NVRAM -> Add -> 7C436110-AB2A-4BBB-A880-FE41995C9F82-> boot-args -> `debug=0x100 keepsyms=1 -v dk.e1000=0 alcid=1 igfxonln=1 -igfxvesa`  <br>
 NVRAM -> Add -> 7C436110-AB2A-4BBB-A880-FE41995C9F82-> prev-lang:kbd -> ``
 - 删除 `#INFO (prev-lang:kbd)` 条目与 `en:252 (ABC), set 656e3a323532` 字符
+
 
 PlatformInfo -> Generic -> MLB ->   <br>
 PlatformInfo -> Generic -> ROM ->   <br>
