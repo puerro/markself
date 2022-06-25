@@ -164,12 +164,12 @@ DeviceProperties -> Add -> 右键 `PciRoot(0x0)/Pci(0x2,0x0)` 条目 -> 在 `Pci
 
 Quirks -> PanicNoKextDump -> true  <br>
 Quirks -> PowerTimeoutKernelPanic -> true  <br>
-Quirks -> XhciPortLimit -> true (运行 MacOS 11.3+ 则关闭)
+Quirks -> XhciPortLimit -> true （运行 MacOS 11.3+ 则关闭）
 
 Misc -> Debug -> AppleDebug -> true  <br>
 Misc -> Debug -> ApplePanic -> true  <br>
 Misc -> Debug -> DisableWatchDog -> true  <br>
-Misc -> Debug -> Target -> 67  <br>
+Misc -> Debug -> Target -> 3 （若需文件形式输出日志信息，则改为 `67`）  <br>
 Misc -> Security -> AllowSetDefault -> true  <br>
 Misc -> Security -> ScanPolicy -> 0  <br>
 Misc -> Security -> SecureBootModel -> j185f  <br>
