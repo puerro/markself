@@ -149,43 +149,43 @@
 
 删除所有 `#WARNING` 字符
 
-Booter -> Quirks -> DevirtualiseMmio -> true
-Booter -> Quirks -> EnableWriteUnprotector -> false
-Booter -> Quirks -> ProtectUefiServices -> true
-Booter -> Quirks -> RebuildAppleMemoryMap -> true
-Booter -> Quirks -> SetupVirtualMap -> false
+Booter -> Quirks -> DevirtualiseMmio -> true  <br>
+Booter -> Quirks -> EnableWriteUnprotector -> false  <br>
+Booter -> Quirks -> ProtectUefiServices -> true  <br>
+Booter -> Quirks -> RebuildAppleMemoryMap -> true  <br>
+Booter -> Quirks -> SetupVirtualMap -> false  <br>
 Booter -> Quirks -> SyncRuntimePermissions -> true
 
-DeviceProperties -> 右键 `Add` 条目 -> 在 `Add` 条目下创建 `PciRoot(0x0)/Pci(0x2,0x0)` Dictionary
+DeviceProperties -> 右键 `Add` 条目 -> 在 `Add` 条目下创建 `PciRoot(0x0)/Pci(0x2,0x0)` Dictionary  <br>
 DeviceProperties -> Add -> 右键 `PciRoot(0x0)/Pci(0x2,0x0)` 条目 -> 在 `PciRoot(0x0)/Pci(0x2,0x0)` 条目下创建 `AAPL,ig-platform-id` Data -> 值为 `00009B3E`
 - AAPL,ig-platform-id = `00009B3E` 只支持集显，独显输出则设置为 `0300C89B`
 - `framebuffer-patch-enable` 与 `framebuffer-stolenmem` 需要 BIOS 内的 `DVMT Pre-Allocated` 少于 64MB 或者没有该选项
 
-Quirks -> PanicNoKextDump -> true
-Quirks -> PowerTimeoutKernelPanic -> true
+Quirks -> PanicNoKextDump -> true  <br>
+Quirks -> PowerTimeoutKernelPanic -> true  <br>
 Quirks -> XhciPortLimit -> true (运行 MacOS 11.3+ 则关闭)
 
-Misc -> Debug -> AppleDebug -> true
-Misc -> Debug -> ApplePanic -> true
-Misc -> Debug -> DisableWatchDog -> true
-Misc -> Debug -> Target -> 67
-Misc -> Security -> AllowSetDefault -> true
-Misc -> Security -> ScanPolicy -> 0
-Misc -> Security -> SecureBootModel -> j185f
+Misc -> Debug -> AppleDebug -> true  <br>
+Misc -> Debug -> ApplePanic -> true  <br>
+Misc -> Debug -> DisableWatchDog -> true  <br>
+Misc -> Debug -> Target -> 67  <br>
+Misc -> Security -> AllowSetDefault -> true  <br>
+Misc -> Security -> ScanPolicy -> 0  <br>
+Misc -> Security -> SecureBootModel -> j185f  <br>
 Misc -> Security -> Vault -> Optional
 
-NVRAM -> Add -> 7C436110-AB2A-4BBB-A880-FE41995C9F82-> boot-args -> `debug=0x100 keepsyms=1 -v dk.e1000=0 alcid=1 igfxonln=1 -igfxvesa`
+NVRAM -> Add -> 7C436110-AB2A-4BBB-A880-FE41995C9F82-> boot-args -> `debug=0x100 keepsyms=1 -v dk.e1000=0 alcid=1 igfxonln=1 -igfxvesa`  <br>
 NVRAM -> Add -> 7C436110-AB2A-4BBB-A880-FE41995C9F82-> prev-lang:kbd -> ``
 - 删除 `#INFO (prev-lang:kbd)` 条目与 `en:252 (ABC), set 656e3a323532` 字符
 
-PlatformInfo -> Generic -> MLB -> 
-PlatformInfo -> Generic -> ROM -> 
-PlatformInfo -> Generic -> SystemProductName -> iMac20,2
-PlatformInfo -> Generic -> SystemSerialNumber -> 
+PlatformInfo -> Generic -> MLB ->   <br>
+PlatformInfo -> Generic -> ROM ->   <br>
+PlatformInfo -> Generic -> SystemProductName -> iMac20,2  <br>
+PlatformInfo -> Generic -> SystemSerialNumber ->   <br>
 PlatformInfo -> Generic -> SystemUUID -> 
 
-UEFI -> APFS -> MinDate -> 20200306
-UEFI -> APFS -> MinVersion -> 1412101001000000
+UEFI -> APFS -> MinDate -> 20200306  <br>
+UEFI -> APFS -> MinVersion -> 1412101001000000  <br>
 UEFI -> Input -> PointerSupportMode -> ``
 
 ## 替换文件
@@ -236,10 +236,8 @@ UEFI -> Input -> PointerSupportMode -> ``
 >HDMI总线类型：1、2、4、6
 
 应用补丁 -> 接口 -> 红色则为DP接口，明确`索引`和`总线ID`
-(索引为1，总线ID为5)
-(索引为3，总线ID为6)
 
-将剩余条目的`类型`由`DP`改为`HDMI`，总线ID修改为`0x01`
+将剩余条目的`类型`由`DP`改为`HDMI`，修改总线ID
 
 点击屏幕左上角`文件` -> `导出` -> `引导工具 Config.plist`
 - (con0~2) * busID(1,2,4,6)
@@ -251,7 +249,7 @@ UEFI -> Input -> PointerSupportMode -> ``
 ## 修复音频
 查看 [AppleALC](https://github.com/acidanthera/AppleALC) 以找到 `Realtek® ALC1220P` 编解码器
 
-ALC1220 修订和布局分别为 `0x100101, 0x100003, layout 1, 2, 3, 5, 7, 11, 13, 15, 16, 17, 21, 27, 28, 29, 30, 34, 35, 98, 99, 100`
+ALC1220 修订和布局分别为 `0x100101, 0x100003, layout 1, 2, 3, 5, 7, 11, 13, 15, 16, 17, 21, 27, 28, 29, 30, 34, 35, 98, 99, 100`  <br>
 ALC1220 最小内核为 `12 (10.8)`
 
 音频 -> 声音信息 -> 名称 -> `ALC Layout ID` -> 改变和测试该值 (举例 `11`)
