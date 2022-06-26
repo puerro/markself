@@ -119,7 +119,7 @@
 
 [AppleALC](https://github.com/acidanthera/AppleALC)
 
-~~[USBInjectAll](https://bitbucket.org/RehabMan/os-x-usb-inject-all/downloads)~~
+[USBInjectAll](https://bitbucket.org/RehabMan/os-x-usb-inject-all/downloads)（USB定制后可删除）
 
 [AirportBrcmFixup](https://github.com/acidanthera/AirportBrcmFixup)
 - 强制使用 `brcmfx-driver=` 加载特定的驱动程序可能会有所帮助
@@ -227,26 +227,33 @@ UEFI -> Input -> PointerSupportMode -> ``
 弹出U盘，测试系统重启与运行是否正常
 
 # Hackintool
->MacOS 由 DP 接口输出画面
 
 ## 下载
 [Hackintool](https://github.com/headkaze/Hackintool)
 - `应用补丁` -> `应用补丁` -> `设备属性` -> `接口`, `基本显存`, `图形卡`, `音频`
 
-## 修复HDMI
->DP总线类型：2、4、5、6
->HDMI总线类型：1、2、4、6
+## ~~修复HDMI~~
+>~~DP总线类型：2、4、5、6  <br>~~
+>~~HDMI总线类型：1、2、4、6~~
 
-应用补丁 -> 接口 -> 红色则为DP接口，明确`索引`和`总线ID`
+~~应用补丁 -> 接口 -> 红色则为DP接口，明确`索引`和`总线ID`~~
 
-将剩余条目的`类型`由`DP`改为`HDMI`，修改总线ID
+~~将剩余条目的`类型`由`DP`改为`HDMI`，修改总线ID~~
 
-点击屏幕左上角`文件` -> `导出` -> `引导工具 Config.plist`
-- (con0~2) * busID(1,2,4,6)
+~~点击屏幕左上角`文件` -> `导出` -> `引导工具 Config.plist`~~
+- ~~(con0~2) * busID(1,2,4,6)~~
 
-选择 `EFI/OC` 目录，确认替换 `config.plist`
+~~选择 `EFI/OC` 目录，确认替换 `config.plist`~~
 
-重启系统并测试 HDMI
+~~重启系统并测试 HDMI~~
+
+因为10代CPU (Comet Lake) 搭配Z590系列主板无法驱动板载视频输出，  <br>
+所以HDMI接口与DP接口都不能正常地输出视频信号，  <br>
+NVRAM -> Add -> 7C436110-AB2A-4BBB-A880-FE41995C9F82-> boot-args -> 加入 ` -igfxvesa`  <br>
+加入 ` -igfxvesa` 以进入系统进行调试等设置，HDMI与DP均能显示，**无需定制修复**（但显存为7MB）  <br>
+- 强制 GPU 进入 VESA 模式（无 GPU 加速），对故障排除很有用
+
+在后续步骤中包含接入独立显卡，接入并调试完成独立显卡后，可删除 ` -igfxvesa`
 
 ## 修复音频
 查看 [AppleALC](https://github.com/acidanthera/AppleALC) 以找到 `Realtek® ALC1220P` 编解码器
@@ -290,5 +297,6 @@ USB -> USB接口 -> 连接器 -> `Bluetooth USB Host Controller`设备 `连接�
 
 ProperTree 导入 `.aml` 文件（可能不止一个文件）并保存
 - 使用 `.kext` 文件也能修复USB，但是可能需要更多的别的设置
+- 视情况删除 `USBInjectAll.kext`
 
 重启系统并且测试
