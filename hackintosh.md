@@ -250,7 +250,7 @@ UEFI -> Input -> PointerSupportMode -> ``
 因为10代CPU (Comet Lake) 搭配Z590系列主板无法驱动板载视频输出，  <br>
 所以HDMI接口与DP接口都不能正常地输出视频信号，  <br>
 NVRAM -> Add -> 7C436110-AB2A-4BBB-A880-FE41995C9F82-> boot-args -> 加入 ` -igfxvesa`  <br>
-加入 ` -igfxvesa` 以进入系统进行调试等设置，HDMI与DP均能显示，**无需定制修复**（但显存为7MB）  <br>
+加入 ` -igfxvesa` 以进入系统进行调试等设置，HDMI与DP均能显示，**无需定制修复**，**也无法修复**（但显存为7MB）  <br>
 - 强制 GPU 进入 VESA 模式（无 GPU 加速），对故障排除很有用
 
 在后续步骤中包含接入独立显卡，接入并调试完成独立显卡后，可删除 ` -igfxvesa`
