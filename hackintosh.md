@@ -119,7 +119,8 @@
 
 [AppleALC](https://github.com/acidanthera/AppleALC)
 
-[USBInjectAll](https://bitbucket.org/RehabMan/os-x-usb-inject-all/downloads)（USB定制后可删除）
+[USBInjectAll](https://bitbucket.org/RehabMan/os-x-usb-inject-all/downloads)
+- USB定制后可删除
 
 [AirportBrcmFixup](https://github.com/acidanthera/AirportBrcmFixup)
 - 强制使用 `brcmfx-driver=` 加载特定的驱动程序可能会有所帮助
@@ -250,7 +251,7 @@ UEFI -> Input -> PointerSupportMode -> ``
 因为10代CPU (Comet Lake) 搭配Z590系列主板无法驱动板载视频输出，  <br>
 所以HDMI接口与DP接口都不能正常地输出视频信号，  <br>
 NVRAM -> Add -> 7C436110-AB2A-4BBB-A880-FE41995C9F82-> boot-args -> 加入 ` -igfxvesa`  <br>
-加入 ` -igfxvesa` 以进入系统进行调试等设置，HDMI与DP均能显示，**无需定制修复**，**也无法修复**（但显存为7MB）  <br>
+加入 ` -igfxvesa` 以进入系统进行调试等设置，HDMI与DP均能显示，**无需定制、修复**，**也无法修复**（但显存为7MB）  <br>
 - 强制 GPU 进入 VESA 模式（无 GPU 加速），对故障排除很有用
 - ` -igfxvesa` 仅作调试用途，不建议在工作环境下使用
 
@@ -267,10 +268,6 @@ ALC1220 最小内核为 `12 (10.8)`
 点击屏幕左上角`文件` -> `导出` -> `引导工具 Config.plist`
 
 重启系统, 屏幕左上角苹果图标，系统偏好设置，声音, 检查声音是否正常
-
-`输出` -> `内置扬声器` -> `内建`, `数字输出` -> `光数码输出端口` (可能存在)
-
-`输入` -> `内置麦克风` -> `内建`
 
 删除 config.plist 内的 `NVRAM` -> Add -> 7C436110-AB2A-4BBB-A880-FE41995C9F82-> boot-args -> `alcid=1`
 
