@@ -271,6 +271,8 @@ ALC1220 最小内核为 `12 (10.8)`
 
 删除 config.plist 内的 `NVRAM` -> Add -> 7C436110-AB2A-4BBB-A880-FE41995C9F82-> boot-args -> `alcid=1`
 
+DeviceProperties -> Add -> PciRoot(0x0)/Pci(0x1f,0x3) -> model -> `Realtek ALC1220P`
+
 视情况删除 `DeviceProperties` -> Add -> `PciRoot(0x0)/Pci(0x1b,0x0)` 条目
 
 ## 修复USB
