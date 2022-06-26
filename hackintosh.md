@@ -119,7 +119,8 @@
 
 [AppleALC](https://github.com/acidanthera/AppleALC)
 
-[USBInjectAll](https://bitbucket.org/RehabMan/os-x-usb-inject-all/downloads)
+~~[USBInjectAll](https://bitbucket.org/RehabMan/os-x-usb-inject-all/downloads)~~（原版，但是自OpenCore 0.7.4后不再适配）  <br>
+[USBInjectAll](https://github.com/daliansky/OS-X-USB-Inject-All)（由[黑果小兵](https://blog.daliansky.net)进行适配）
 - USB定制后可删除
 
 [AirportBrcmFixup](https://github.com/acidanthera/AirportBrcmFixup)
