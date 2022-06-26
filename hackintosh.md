@@ -258,7 +258,7 @@ NVRAM -> Add -> 7C436110-AB2A-4BBB-A880-FE41995C9F82-> boot-args -> 加入 ` -ig
 在后续步骤中包含接入独立显卡，接入并调试完成独立显卡后，可删除 ` -igfxvesa`
 
 ## 修复音频
-查看 [AppleALC](https://github.com/acidanthera/AppleALC) 以找到 `Realtek® ALC1220P` 编解码器
+查看 [AppleALC](https://github.com/acidanthera/AppleALC) 以找到与 `Realtek® ALC1220P` 同型号或相近型号的编解码器
 
 ALC1220 修订和布局分别为 `0x100101, 0x100003, layout 1, 2, 3, 5, 7, 11, 13, 15, 16, 17, 21, 27, 28, 29, 30, 34, 35, 98, 99, 100`  <br>
 ALC1220 最小内核为 `12 (10.8)`
