@@ -187,6 +187,8 @@ PlatformInfo -> Generic -> SystemUUID ->
 
 UEFI -> APFS -> MinDate -> 20200306  <br>
 UEFI -> APFS -> MinVersion -> 1412101001000000  <br>
+UEFI -> Audio -> AudioOutMask -> 未知  <br>
+UEFI -> Audio -> PlayChime -> `Auto` / `Enabled` （未测试）  <br>
 UEFI -> Input -> PointerSupportMode -> ``
 
 ## 替换文件
