@@ -276,7 +276,6 @@ ALC1220 最小内核为 `12 (10.8)`
 视情况删除 `DeviceProperties` -> Add -> `PciRoot(0x0)/Pci(0x1b,0x0)` 条目
 
 ## 修复USB
-
 USB -> 绿色条目代表插入了USB设备
 
 名称包含`HS`代表USB2.0，包含`SS`代表USB3.0
@@ -300,3 +299,32 @@ Kernel -> Quirks -> XhciPortLimit -> false
 - 视情况停用并删除 `USBInjectAll.kext`
 
 重启系统并且测试
+
+# Big Sur 修复
+AirportBrcmFixup
+- 强制使用 `brcmfx-driver=` 加载特定的驱动程序可能会有所帮助
+  - 以 BCM94352Z 为例，可能需要在 `boot-args` 中 使用`brcmfx-driver=2` 解决问题，其他芯片组将需要其他参数
+  - 或者  <br>
+    启用：AirportBrcmFixup.kext/Contents/PlugIns/AirPortBrcmNIC_Injector.kext  <br>
+    禁用：AirportBrcmFixup.kext/Contents/PlugIns/AirPortBrcm4360_Injector.kext（不勾选即可）
+
+Kernel -> Quirks -> XhciPortLimit -> false
+
+SATA 支持受损
+- 由于 Apple 在 AppleAHCIPort.kext 中 删除了 AppleIntelPchSeriesAHCI 类
+- 解决这一问题，添加 Catalina 的补丁 [AppleAHCIPort.kext](https://github.com/dortania/OpenCore-Install-Guide/blob/master/extra-files/CtlnaAHCIPort.kext.zip) 并将 `MinKernel` 设为 `20.0.0`
+
+# Monterey 修复
+>[BrcmPatchRAM](https://github.com/acidanthera/BrcmPatchRAM)
+
+BrcmBluetoothInjector.kext
+- 如果仍然启动 Big Sur 及更早版本的系统，应在 config.plist 中将该 kext 的 `MaxKernel` 字段设置 `20.99.9`
+
+保留 BrcmFirmwareData.kext  <br>
+保留 BrcmPatchRAM3.kext
+
+加入  <br>
+[BlueToolFixup](https://github.com/acidanthera/BrcmPatchRAM)
+- 如果仍然启动 Big Sur 及更早版本的系统，应在 config.plist 中将该 kext 的 `MinKernel` 字段设置 `21.00.0` 以防止在旧系统上加载 BlueToolFixup
+
+# 其他
