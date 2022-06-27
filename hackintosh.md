@@ -295,7 +295,7 @@ USB -> USB接口 -> 连接器 -> `Bluetooth USB Host Controller`设备 `连接�
 点击下方`导出`符号进行导出
 
 ProperTree 导入 `SSDT-UIAC.aml` 文件并保存  <br>
-Quirks -> XhciPortLimit -> false
+Kernel -> Quirks -> XhciPortLimit -> false
 - 使用 `.kext` 文件也能修复USB，但是可能需要更多的别的设置
 - 视情况停用并删除 `USBInjectAll.kext`
 
