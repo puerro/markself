@@ -284,8 +284,7 @@ USB -> 绿色条目代表插入了USB设备
 USB3.0接口需要USB3.0、USB2.0设备各插拔一次，使用过的接口的条目变绿
 
 对不变色的条目，点击下方`-`号删除
-
-删除USB3.0接口的USB2.0条目，实际USB3.0接口不再兼容USB2.0
+- 若删除USB3.0接口的USB2.0条目，实际USB3.0接口不再兼容USB2.0
 
 减少到15个为止
 
@@ -295,8 +294,8 @@ USB -> USB接口 -> 连接器 -> `Bluetooth USB Host Controller`设备 `连接�
 
 点击下方`导出`符号进行导出
 
-ProperTree 导入 `.aml` 文件（可能不止一个文件）并保存
+ProperTree 导入 `SSDT-UIAC.aml` 文件并保存
 - 使用 `.kext` 文件也能修复USB，但是可能需要更多的别的设置
-- 视情况删除 `USBInjectAll.kext`
+- 视情况停用并删除 `USBInjectAll.kext`
 
 重启系统并且测试
