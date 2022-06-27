@@ -163,9 +163,9 @@ DeviceProperties -> Add -> 右键 `PciRoot(0x0)/Pci(0x2,0x0)` 条目 -> 在 `Pci
 - AAPL,ig-platform-id = `00009B3E` 只支持集显，独显输出则设置为 `0300C89B`
 - `framebuffer-patch-enable` 与 `framebuffer-stolenmem` 需要 BIOS 内的 `DVMT Pre-Allocated` 少于 64MB 或者没有该选项
 
-Quirks -> PanicNoKextDump -> true  <br>
-Quirks -> PowerTimeoutKernelPanic -> true  <br>
-Quirks -> XhciPortLimit -> true （运行 MacOS 11.3+ 则关闭）
+Kernel -> Quirks -> PanicNoKextDump -> true  <br>
+Kernel -> Quirks -> PowerTimeoutKernelPanic -> true  <br>
+Kernel -> Quirks -> XhciPortLimit -> true （运行 MacOS 11.3+ 则关闭）
 
 Misc -> Debug -> AppleDebug -> true  <br>
 Misc -> Debug -> ApplePanic -> true  <br>
