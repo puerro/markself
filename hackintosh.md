@@ -310,7 +310,7 @@ Kernel -> Quirks -> XhciPortLimit -> false
 SATA 支持受损
 - 由于 Apple 在 AppleAHCIPort.kext 中 删除了 AppleIntelPchSeriesAHCI 类
 - 解决这一问题，添加 Catalina 的补丁 [AppleAHCIPort.kext](https://github.com/dortania/OpenCore-Install-Guide/blob/master/extra-files/CtlnaAHCIPort.kext.zip) 并将 `MinKernel` 设为 `20.0.0`
-- 不能进行SATA热插拔，**Monterey 系统似乎不需要修复**
+- 不能进行SATA热插拔，**Monterey 系统似乎不需要修复**（未测试，没有SATA设备）
 
 # Monterey 修复
 >[BrcmPatchRAM](https://github.com/acidanthera/BrcmPatchRAM)
