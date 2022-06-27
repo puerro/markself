@@ -304,9 +304,6 @@ Kernel -> Quirks -> XhciPortLimit -> false
 AirportBrcmFixup
 - 强制使用 `brcmfx-driver=` 加载特定的驱动程序可能会有所帮助
   - 以 BCM94352Z 为例，可能需要在 `boot-args` 中 使用`brcmfx-driver=2` 解决问题，其他芯片组将需要其他参数
-  - 或者  <br>
-    启用：AirportBrcmFixup.kext/Contents/PlugIns/AirPortBrcmNIC_Injector.kext  <br>
-    禁用：AirportBrcmFixup.kext/Contents/PlugIns/AirPortBrcm4360_Injector.kext（不勾选即可）
 
 Kernel -> Quirks -> XhciPortLimit -> false
 
