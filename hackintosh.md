@@ -316,14 +316,14 @@ SATA 支持受损
 >[BrcmPatchRAM](https://github.com/acidanthera/BrcmPatchRAM)
 
 BrcmBluetoothInjector.kext
-- 如果仍然启动 Big Sur 及更早版本的系统，应在 config.plist 中将该 kext 的 `MaxKernel` 字段设置 `20.99.9`
+- 如果仍然启动 Big Sur 及更早版本的系统，应在 config.plist 中将该 kext 的 `MaxKernel` 字段设置 `20.99.9`（默认为 ``）
 
 保留 BrcmFirmwareData.kext  <br>
 保留 BrcmPatchRAM3.kext
 
 加入  <br>
 [BlueToolFixup](https://github.com/acidanthera/BrcmPatchRAM)
-- 如果仍然启动 Big Sur 及更早版本的系统，应在 config.plist 中将该 kext 的 `MinKernel` 字段设置 `21.00.0` 以防止在旧系统上加载 BlueToolFixup
+- 如果仍然启动 Big Sur 及更早版本的系统，应在 config.plist 中将该 kext 的 `MinKernel` 字段设置 `21.00.0` （默认为 ``）以防止在旧系统上加载 BlueToolFixup
 
 视情况在 `boot-args` 中将 `dk.e1000=0` 改为 `e1000=0`
 
