@@ -170,13 +170,13 @@ Kernel -> Quirks -> XhciPortLimit -> true （运行 MacOS 11.3+ 则关闭）
 Misc -> Debug -> AppleDebug -> true  <br>
 Misc -> Debug -> ApplePanic -> true  <br>
 Misc -> Debug -> DisableWatchDog -> true  <br>
-Misc -> Debug -> Target -> 3 （若需文件形式输出日志信息，则改为 `67`）  <br>
+Misc -> Debug -> Target -> `3` （若需文件形式输出日志信息，则改为 `67`）  <br>
 Misc -> Security -> AllowSetDefault -> true  <br>
-Misc -> Security -> ScanPolicy -> `17760515`（[Opencore ScanPolicy Generator](https://github.com/i3p9/oc-scanpolicy) 生成所需的值，OpenCore默认为 `17760515`）  <br>
-Misc -> Security -> SecureBootModel -> j185f  <br>
-Misc -> Security -> Vault -> Optional
+Misc -> Security -> ScanPolicy -> `0`（[Opencore ScanPolicy Generator](https://github.com/i3p9/oc-scanpolicy) 生成所需的值，OpenCore默认为 `17760515`）  <br>
+Misc -> Security -> SecureBootModel -> `j185f`  <br>
+Misc -> Security -> Vault -> `Optional`
 
-NVRAM -> Add -> 7C436110-AB2A-4BBB-A880-FE41995C9F82-> boot-args -> `debug=0x100 keepsyms=1 -v dk.e1000=0 alcid=1 igfxonln=1 -igfxvesa`  <br>
+NVRAM -> Add -> 7C436110-AB2A-4BBB-A880-FE41995C9F82-> boot-args -> `debug=0x100 keepsyms=1 -v alcid=1 igfxonln=1 -igfxvesa`  <br>
 NVRAM -> Add -> 7C436110-AB2A-4BBB-A880-FE41995C9F82-> prev-lang:kbd -> ``
 - 删除 `#INFO (prev-lang:kbd)` 条目与 `en:252 (ABC), set 656e3a323532` 字符
 
@@ -207,7 +207,7 @@ UEFI -> Input -> PointerSupportMode -> ``
 
 选择 `Erase` ，重命名为 `Macintosh HD`，格式为 `APFS`，点击 `Erase`
 
-回到恢复主界面，点击 `Reinstall macOS`、`Continue`、`Continue`
+回到恢复主界面，点击 `Reinstall macOS`、`Continue`、`Install`、`Install`
 
 选择系统硬盘，点击 `Install`
 
@@ -325,6 +325,6 @@ BrcmBluetoothInjector.kext
 [BlueToolFixup](https://github.com/acidanthera/BrcmPatchRAM)
 - 如果仍然启动 Big Sur 及更早版本的系统，应在 config.plist 中将该 kext 的 `MinKernel` 字段设置 `21.00.0` （默认为 ``）以防止在旧系统上加载 BlueToolFixup
 
-在 `boot-args` 中将 `dk.e1000=0` 改为 `e1000=0`
+在 `boot-args` 中加入 ` e1000=0`
 
 # 其他
