@@ -325,6 +325,6 @@ BrcmBluetoothInjector.kext
 [BlueToolFixup](https://github.com/acidanthera/BrcmPatchRAM)
 - 如果仍然启动 Big Sur 及更早版本的系统，应在 config.plist 中将该 kext 的 `MinKernel` 字段设置 `21.00.0` （默认为 ``）以防止在旧系统上加载 BlueToolFixup
 
-视情况在 `boot-args` 中将 `dk.e1000=0` 改为 `e1000=0`
+在 `boot-args` 中将 `dk.e1000=0` 改为 `e1000=0`
 
 # 其他
