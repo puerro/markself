@@ -119,8 +119,7 @@
 
 [AppleALC](https://github.com/acidanthera/AppleALC)
 
-~~[USBInjectAll](https://bitbucket.org/RehabMan/os-x-usb-inject-all/downloads)~~（原版，但是自OpenCore 0.7.4后不再适配）  <br>
-[USBInjectAll](https://github.com/daliansky/OS-X-USB-Inject-All)（由[黑果小兵](https://blog.daliansky.net)进行适配）
+[USBInjectAll](https://bitbucket.org/RehabMan/os-x-usb-inject-all/downloads)（自OpenCore 0.7.4后不再适配）
 - USB定制后可删除
 
 [AirportBrcmFixup](https://github.com/acidanthera/AirportBrcmFixup)
@@ -228,11 +227,7 @@ UEFI -> Input -> PointerSupportMode -> ``
 
 弹出U盘，测试系统重启与运行是否正常
 
-# Hackintool
-
-## 下载
-[Hackintool](https://github.com/headkaze/Hackintool)
-- `应用补丁` -> `应用补丁` -> `设备属性` -> `接口`, `基本显存`, `图形卡`, `音频`
+# 修复
 
 ## ~~修复HDMI~~
 >~~DP总线类型：2、4、5、6  <br>~~
@@ -264,39 +259,15 @@ NVRAM -> Add -> 7C436110-AB2A-4BBB-A880-FE41995C9F82-> boot-args -> 加入 ` -ig
 ALC1220 修订和布局分别为 `0x100101, 0x100003, layout 1, 2, 3, 5, 7, 11, 13, 15, 16, 17, 21, 27, 28, 29, 30, 34, 35, 98, 99, 100`  <br>
 ALC1220 最小内核为 `12 (10.8)`
 
-音频 -> 声音信息 -> 名称 -> `ALC Layout ID` -> 改变和测试该值 (举例 `1` , `2` , `3` , `5` , `7` , `11`)  <br>
-(DeviceProperties -> Add -> `PciRoot(0x0)/Pci(0x1F,0x3)` -> `layout-id` -> ``)
-
-点击屏幕左上角`文件` -> `导出` -> `引导工具 Config.plist`
-
 重启系统, 屏幕左上角苹果图标，系统偏好设置，声音, 检查声音是否正常
 
-删除 config.plist 内的 `NVRAM` -> Add -> 7C436110-AB2A-4BBB-A880-FE41995C9F82-> boot-args -> `alcid=1`
+修改 config.plist 内的 `NVRAM` -> Add -> 7C436110-AB2A-4BBB-A880-FE41995C9F82-> boot-args -> `alcid` （举例 `1` , `2` , `3` , `5` , `7` , `11`）
 
 视情况删除 `DeviceProperties` -> Add -> `PciRoot(0x0)/Pci(0x1b,0x0)` 条目
 
 ## 修复USB
-USB -> 绿色条目代表插入了USB设备
 
-名称包含`HS`代表USB2.0，包含`SS`代表USB3.0
 
-USB3.0接口需要USB3.0、USB2.0设备各插拔一次，使用过的接口的条目变绿
-
-对不变色的条目，点击下方`-`号删除
-- 若删除USB3.0接口的USB2.0条目，实际USB3.0接口不再兼容USB2.0
-
-减少到15个为止
-
-USB -> USB接口 -> 连接器 -> 分别设置`USB2`或`USB3`
-
-USB -> USB接口 -> 连接器 -> `Bluetooth USB Host Controller`设备 `连接器`设置为`Internal`
-
-点击下方`导出`符号进行导出
-
-ProperTree 导入 `SSDT-UIAC.aml` 文件并保存  <br>
-Kernel -> Quirks -> XhciPortLimit -> false
-- 使用 `.kext` 文件也能修复USB，但是可能需要更多的别的设置
-- 视情况停用并删除 `USBInjectAll.kext`
 
 重启系统并且测试
 
