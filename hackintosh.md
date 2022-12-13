@@ -4,12 +4,12 @@
 ## 关闭
 - Fast Boot
 - Secure Boot
-- Serial/COM Port
-- Parallel Port
+- ~~Serial/COM Port~~
+- ~~Parallel Port~~
 - VT-d （如果将 `DisableIoMapper` 设置为 `YES` ，则可以开启）
 - CSM （或者 UEFI Only）
 - Thunderbolt (对于初始安装，如果未正确设置，Thunderbolt 可能会导致问题）
-- Intel SGX
+- ~~Intel SGX~~
 - Intel Platform Trust
 - CFG Lock （MSR 0xE2 写入保护）（**黑苹果无法在启用CFG-Lock时启动。**）
   - **这必须关闭，如果找不到该选项则需要启用 `Kernel` -> `Quirks` 下的`AppleXcpmCfgLock` 。**
@@ -19,10 +19,10 @@
 - Above 4G decoding
   - 2020年+ BIOS 注意：启用 Above4G 时，Resizable BAR Support 可能会在某些Z490和更新的主板上可用。如果启用，请确保将 Booter -> Quirks -> ResizeAppleGpuBars 设置为 `0` 。
 - Hyper-Threading
-- Execute Disable Bit
+- ~~Execute Disable Bit~~
 - EHCI/XHCI Hand-off
 - OS type: Windows 8.1/10 UEFI Mode
-- DVMT Pre-Allocated(iGPU Memory): 64MB
+- DVMT Pre-Allocated(iGPU Memory): 64MB (least)
 - SATA Mode: AHCI
 
 # 前置Windows步骤
