@@ -68,7 +68,7 @@
 ## 写入U盘
 >愿原力与你同在
 
-运行 `MakeInstall.bat`，选择U盘和 `Use OpenCore instead of Clover` 选项，例如 `1O`、`2O`、`3O` 等
+运行 `MakeInstall.bat`，选择U盘
 
 运行时需要输入系统恢复镜像的文件路径
 
