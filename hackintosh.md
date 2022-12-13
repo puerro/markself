@@ -109,10 +109,10 @@
   - ~~以 BCM94352Z 为例，可能需要在 `boot-args` 中 使用`brcmfx-driver=2` 解决问题，其他芯片组将需要其他参数~~
 
 ~~[BrcmPatchRAM](https://github.com/acidanthera/BrcmPatchRAM)~~
-- ~~BrcmBluetoothInjector.kext (MacOS 12-)
-- ~~BrcmFirmwareData.kext
-- ~~BrcmPatchRAM3.kext
-- ~~BlueToolFixup.kext (MacOS 12+)
+- ~~BrcmBluetoothInjector.kext (MacOS 12-)~~
+- ~~BrcmFirmwareData.kext~~
+- ~~BrcmPatchRAM3.kext~~
+- ~~BlueToolFixup.kext (MacOS 12+)~~
   - ~~不可在 macOS 12 或更新的系统下使用 `BrcmBluetoothInjector.kext`~~
 
 ## config.plist
@@ -157,7 +157,7 @@ Misc -> Security -> ScanPolicy -> `0`（[Opencore ScanPolicy Generator](https://
 Misc -> Security -> SecureBootModel -> `j185f`  <br>
 Misc -> Security -> Vault -> `Optional`
 
-NVRAM -> Add -> 7C436110-AB2A-4BBB-A880-FE41995C9F82-> boot-args -> `debug=0x100 keepsyms=1 -v alcid=11 igfxonln=1 -igfxvesa`  <br>
+NVRAM -> Add -> 7C436110-AB2A-4BBB-A880-FE41995C9F82-> boot-args -> `debug=0x100 keepsyms=1 -v alcid=11 agdpmod=pikera e1000=0`  <br>
 NVRAM -> Add -> 7C436110-AB2A-4BBB-A880-FE41995C9F82-> prev-lang:kbd -> ``
 - 删除 `#INFO (prev-lang:kbd)` 条目与 `en:252 (ABC), set 656e3a323532` 字符
 
@@ -277,7 +277,5 @@ BrcmBluetoothInjector.kext
 加入  <br>
 [BlueToolFixup](https://github.com/acidanthera/BrcmPatchRAM)
 - 如果仍然启动 Big Sur 及更早版本的系统，应在 config.plist 中将该 kext 的 `MinKernel` 字段设置 `21.00.0` （默认为 ``）以防止在旧系统上加载 BlueToolFixup
-
-在 `boot-args` 中加入 ` e1000=0`
 
 # 其他
