@@ -110,8 +110,8 @@
 
 [AppleALC](https://github.com/acidanthera/AppleALC)
 
-~~[USBInjectAll](https://bitbucket.org/RehabMan/os-x-usb-inject-all/downloads)（自OpenCore 0.7.4后不再适配）~~
-- USB定制后可删除，建议在系统安装前定制
+[USBInjectAll](https://bitbucket.org/RehabMan/os-x-usb-inject-all/downloads)（自OpenCore 0.7.4后不再适配）
+- USB定制后可删除
 
 ~~[AirportBrcmFixup](https://github.com/acidanthera/AirportBrcmFixup)~~
 - ~~强制使用 `brcmfx-driver=` 加载特定的驱动程序可能会有所帮助~~
