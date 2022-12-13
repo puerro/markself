@@ -242,7 +242,7 @@ NVRAM -> Add -> 7C436110-AB2A-4BBB-A880-FE41995C9F82-> boot-args -> 加入 ` -ig
 - 强制 GPU 进入 VESA 模式（无 GPU 加速），对故障排除很有用
 - ` -igfxvesa` 仅作调试用途，不建议在工作环境下使用
 
-在后续步骤中包含接入独立显卡，接入并调试完成独立显卡后，可删除 ` -igfxvesa`
+后续接入独立显卡，调试完成独立显卡后，可删除 ` -igfxvesa`
 
 ## 修复音频
 查看 [AppleALC](https://github.com/acidanthera/AppleALC) 以找到与 `Realtek® ALC1220P` 同型号或相近型号的编解码器
@@ -254,7 +254,7 @@ ALC1220 最小内核为 `12 (10.8)`
 
 修改 config.plist 内的 `NVRAM` -> Add -> 7C436110-AB2A-4BBB-A880-FE41995C9F82-> boot-args -> `alcid` （举例 `1` , `2` , `3` , `5` , `7` , `11`）
 
-视情况删除 `DeviceProperties` -> Add -> `PciRoot(0x0)/Pci(0x1b,0x0)` 条目
+视情况删除或修改 `DeviceProperties` -> Add -> `PciRoot(0x0)/Pci(0x1b,0x0)` 条目
 
 ## 修复USB
 
