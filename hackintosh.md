@@ -131,9 +131,7 @@
 [ProperTree](https://github.com/corpnewt/ProperTree)
 
 ### 编辑 config
->可以与旧版本的配置文件对比再修改
-
->当前步骤中没有独立显卡，输出画面是由集成显卡输出的
+>可以与旧版本的配置文件对比修改
 
 运行 `ProperTree.bat` -> `File` -> `Open` -> 选择 `EFI/OC/config.plist`
 
