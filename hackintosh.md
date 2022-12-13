@@ -164,8 +164,8 @@ Misc -> Security -> ScanPolicy -> `0`（[Opencore ScanPolicy Generator](https://
 Misc -> Security -> SecureBootModel -> `j185f`  <br>
 Misc -> Security -> Vault -> `Optional`
 
-NVRAM -> Add -> 7C436110-AB2A-4BBB-A880-FE41995C9F82-> boot-args -> `-v debug=0x100 keepsyms=1 alcid=11 e1000=0 agdpmod=pikera shikigva=80`  <br>
-NVRAM -> Add -> 7C436110-AB2A-4BBB-A880-FE41995C9F82-> prev-lang:kbd -> ``
+NVRAM -> Add -> 7C436110-AB2A-4BBB-A880-FE41995C9F82-> boot-args -> `-v debug=0x100 keepsyms=1 alcid=11 dk.e1000=0 e1000=0 agdpmod=pikera shikigva=80`  <br>
+NVRAM -> Add -> 7C436110-AB2A-4BBB-A880-FE41995C9F82-> prev-lang:kbd -> `656E2D55533A30`
 - 删除 `#INFO (prev-lang:kbd)` 条目与 `en:252 (ABC), set 656e3a323532` 字符
 
 PlatformInfo -> Generic -> MLB ->   <br>
@@ -179,6 +179,7 @@ UEFI -> APFS -> MinVersion -> `1412101001000000`  <br>
 UEFI -> Audio -> AudioDevide -> ``  <br>
 UEFI -> Audio -> AudioOutMask -> `-1`  <br>
 UEFI -> Audio -> PlayChime -> `Auto`  <br>
+
 UEFI -> Input -> PointerSupportMode -> ``
 
 ## 替换文件
