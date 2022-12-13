@@ -148,7 +148,7 @@ Booter -> Quirks -> SyncRuntimePermissions -> true
 
 DeviceProperties -> 右键 `Add` 条目 -> 在 `Add` 条目下创建 `PciRoot(0x0)/Pci(0x2,0x0)` Dictionary  <br>
 DeviceProperties -> Add -> 右键 `PciRoot(0x0)/Pci(0x2,0x0)` 条目 -> 在 `PciRoot(0x0)/Pci(0x2,0x0)` 条目下创建 `AAPL,ig-platform-id` Data -> 值为 `00009B3E`
-- AAPL,ig-platform-id = `00009B3E` 只支持集显，独显输出则设置为 `0300C89B`
+- AAPL,ig-platform-id = `00009B3E` 是集显输出，独显输出则设置为 `0300C89B`
 - `framebuffer-patch-enable` 与 `framebuffer-stolenmem` 需要 BIOS 内的 `DVMT Pre-Allocated` 少于 64MB 或者没有该选项
 
 Kernel -> Quirks -> PanicNoKextDump -> true  <br>
