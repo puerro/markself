@@ -82,7 +82,7 @@
 视情况删除 `OC` 文件夹内的 `Resources` 文件夹
 
 ## ACPI
-将 `SSDT-PLUG.aml`、`SSDT-EC-USBX.aml`、`SSDT-AWAC.aml`、`SSDT-RHUB.aml` 移动到 `ACPI` 目录
+将 `SSDT-PLUG.aml`、`SSDT-EC.aml`、`SSDT-USBX.aml`、`SSDT-RTCAWAC.aml`、`SSDT-USB-Reset.aml` 移动到 `ACPI` 目录
 
 ## Drivers
 只留下 `AudioDxe.efi`、`OpenRuntime.efi` 文件，其他的都删掉
@@ -104,16 +104,16 @@
 [USBInjectAll](https://bitbucket.org/RehabMan/os-x-usb-inject-all/downloads)（自OpenCore 0.7.4后不再适配）
 - USB定制后可删除
 
-[AirportBrcmFixup](https://github.com/acidanthera/AirportBrcmFixup)
-- 强制使用 `brcmfx-driver=` 加载特定的驱动程序可能会有所帮助
-  - 以 BCM94352Z 为例，可能需要在 `boot-args` 中 使用`brcmfx-driver=2` 解决问题，其他芯片组将需要其他参数
+~~[AirportBrcmFixup](https://github.com/acidanthera/AirportBrcmFixup)~~
+~~- 强制使用 `brcmfx-driver=` 加载特定的驱动程序可能会有所帮助~~
+~~  - 以 BCM94352Z 为例，可能需要在 `boot-args` 中 使用`brcmfx-driver=2` 解决问题，其他芯片组将需要其他参数~~
 
-[BrcmPatchRAM](https://github.com/acidanthera/BrcmPatchRAM)
-- BrcmBluetoothInjector.kext (MacOS 12-)
-- BrcmFirmwareData.kext
-- BrcmPatchRAM3.kext
-- BlueToolFixup.kext (MacOS 12+)
-  - 不可在 macOS 12 或更新的系统下使用 `BrcmBluetoothInjector.kext`
+~~[BrcmPatchRAM](https://github.com/acidanthera/BrcmPatchRAM)~~
+~~- BrcmBluetoothInjector.kext (MacOS 12-)~~
+~~- BrcmFirmwareData.kext~~
+~~- BrcmPatchRAM3.kext~~
+~~- BlueToolFixup.kext (MacOS 12+)~~
+~~  - 不可在 macOS 12 或更新的系统下使用 `BrcmBluetoothInjector.kext`~~
 
 ## config.plist
 将 `Docs\Sample.plist` 文件移动到 `EFI/OC/` 目录下，并且重命名为 `config.plist`
