@@ -170,12 +170,12 @@ NVRAM -> Add -> 7C436110-AB2A-4BBB-A880-FE41995C9F82-> prev-lang:kbd -> ``
 
 PlatformInfo -> Generic -> MLB ->   <br>
 PlatformInfo -> Generic -> ROM ->   <br>
-PlatformInfo -> Generic -> SystemProductName -> iMac20,2  <br>
+PlatformInfo -> Generic -> SystemProductName -> `iMac20,2`  <br>
 PlatformInfo -> Generic -> SystemSerialNumber ->   <br>
 PlatformInfo -> Generic -> SystemUUID -> 
 
-UEFI -> APFS -> MinDate -> 20200306  <br>
-UEFI -> APFS -> MinVersion -> 1412101001000000  <br>
+UEFI -> APFS -> MinDate -> `20200306`  <br>
+UEFI -> APFS -> MinVersion -> `1412101001000000`  <br>
 UEFI -> Audio -> AudioOutMask -> 未知  <br>
 UEFI -> Audio -> PlayChime -> `Auto` / `Enabled` （未测试）  <br>
 UEFI -> Input -> PointerSupportMode -> ``
