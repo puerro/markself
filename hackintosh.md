@@ -51,29 +51,11 @@
 
 回到主菜单，选择 `PluginType` 生成 `SSDT-PLUG.aml`、`SSDT-PLUG.dsl` 文件
 
-回到主菜单，选择 `AWAC` 生成 `SSDT-AWAC.aml`、`SSDT-AWAC.dsl` 文件
+回到主菜单，选择 `USBX` 生成 `SSDT-USBX.aml`、`SSDT-USBX.dsl` 文件
+
+回到主菜单，选择 `RTCAWAC` 生成 `SSDT-RTCAWAC.aml`、`SSDT-RTCAWAC.dsl` 文件
 
 回到主菜单，选择 `USB Reset` 生成 `SSDT-USB-Reset.aml`、`SSDT-USB-Reset.dsl` 文件
-
-### 下载文件
-在 `SSDTTime\Scripts` 目录下，下载 [SSDT-USBX.aml](https://github.com/dortania/OpenCore-Post-Install/blob/master/extra-files/SSDT-USBX.aml) 文件
-
-### 反编译与编译
-#### 反编译
-在 `SSDTTime\Scripts` 目录下使用 `cmd.exe` 运行 `iasl SSDT-USBX.aml` 反编译生成 `SSDT-USBX.dsl` 文件
-
-将 `SSDT-USBX.dsl` 文件内的 `Device (USBX)` 内容复制到 `SSDT-EC.dsl` 文件内
-- `Device (USBX)` 内容不包含其下的 `Method (_STA, 0, NotSerialized)  // _STA: Status` 部分
-- 在 `Device (EC)` 的尾部空两行再插入 `Device (USBX)` 的内容
-
-#### 重命名
-将 `SSDT-EC.dsl` 重命名成 `SSDT-EC-USBX.dsl`
-
-#### 编译
-在 `SSDTTime\Scripts` 目录下使用 `cmd.exe` 运行 `iasl "SSDTTime\Results\SSDT-EC-USBX.dsl"` 编译生成 `SSDT-EC-USBX.aml` 文件
-
-### 重命名
-将 `SSDT-USB-Reset.aml` 重命名成 `SSDT-RHUB.aml`
 
 # U盘
 ## 工具
