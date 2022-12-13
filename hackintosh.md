@@ -165,8 +165,7 @@ Misc -> Security -> SecureBootModel -> `j185f`  <br>
 Misc -> Security -> Vault -> `Optional`
 
 NVRAM -> Add -> 7C436110-AB2A-4BBB-A880-FE41995C9F82-> boot-args -> `-v debug=0x100 keepsyms=1 alcid=11 agdpmod=pikera e1000=0`  <br>
-NVRAM -> Add -> 7C436110-AB2A-4BBB-A880-FE41995C9F82-> prev-lang:kbd -> ``
-- 删除 `#INFO (prev-lang:kbd)` 条目与 `en:252 (ABC), set 656e3a323532` 字符
+NVRAM -> Add -> 7C436110-AB2A-4BBB-A880-FE41995C9F82-> prev-lang:kbd -> `656E3A323532`
 
 PlatformInfo -> Generic -> MLB ->   <br>
 PlatformInfo -> Generic -> ROM ->   <br>
