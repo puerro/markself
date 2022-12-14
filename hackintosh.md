@@ -153,7 +153,7 @@ DeviceProperties -> Add -> 右键 `PciRoot(0x0)/Pci(0x2,0x0)` 条目 -> 在 `Pci
 
 Kernel -> Quirks -> PanicNoKextDump -> true  <br>
 Kernel -> Quirks -> PowerTimeoutKernelPanic -> true  <br>
-Kernel -> Quirks -> XhciPortLimit -> true （运行 MacOS 11.3+ 则关闭）
+Kernel -> Quirks -> XhciPortLimit -> true （运行 MacOS 11.3+ 则false）
 
 Misc -> Debug -> AppleDebug -> true  <br>
 Misc -> Debug -> ApplePanic -> true  <br>
