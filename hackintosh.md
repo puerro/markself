@@ -153,7 +153,7 @@ DeviceProperties -> Add -> 右键 `PciRoot(0x0)/Pci(0x2,0x0)` 条目 -> 在 `Pci
 - `framebuffer-patch-enable` 与 `framebuffer-stolenmem` 需要 BIOS 内的 `DVMT Pre-Allocated` 少于 64MB 或者没有该选项
 
 DeviceProperties -> 右键 `Add` 条目 -> 在 `Add` 条目下创建 `PciRoot(0x0)/Pci(0x1F,0x3)` Dictionary  <br>
-DeviceProperties -> Add -> 右键 `PciRoot(0x0)/Pci(0x1F,0x3)` 条目 -> 在 `PciRoot(0x0)/Pci(0x1F,0x3)` 条目下创建 `layout-id` Data -> 值为 `0B000000`
+DeviceProperties -> Add -> 右键 `PciRoot(0x0)/Pci(0x1F,0x3)` 条目 -> 在 `PciRoot(0x0)/Pci(0x1F,0x3)` 条目下创建 `layout-id` Data -> 值为 `0B000000`  <br>
 DeviceProperties -> 右键 `Add` 条目 -> 在 `Add` 条目下创建 `PciRoot(0x0)/Pci(0x1B,0x2)/Pci(0x0,0x0)` Dictionary  <br>
 DeviceProperties -> Add -> 右键 `PciRoot(0x0)/Pci(0x1B,0x2)/Pci(0x0,0x0)` 条目 -> 在 `PciRoot(0x0)/Pci(0x1B,0x2)/Pci(0x0,0x0)` 条目下创建 `device-id` Data -> 值为 `F2150000`
 
@@ -170,7 +170,7 @@ Misc -> Security -> ScanPolicy -> `19857667`（[Opencore ScanPolicy Generator](h
 Misc -> Security -> SecureBootModel -> `j185f`  <br>
 Misc -> Security -> Vault -> `Optional`
 
-NVRAM -> Add -> 7C436110-AB2A-4BBB-A880-FE41995C9F82-> boot-args -> `-v debug=0x100 keepsyms=1 alcid=11 dk.e1000=0 e1000=0 agdpmod=pikera shikigva=80`  <br>
+NVRAM -> Add -> 7C436110-AB2A-4BBB-A880-FE41995C9F82-> boot-args -> `-v debug=0x100 keepsyms=1 dk.e1000=0 e1000=0 agdpmod=pikera shikigva=80`  <br>
 NVRAM -> Add -> 7C436110-AB2A-4BBB-A880-FE41995C9F82-> prev-lang:kbd -> `656E2D55533A30`
 - 删除 `#INFO (prev-lang:kbd)` 条目与 `en:252 (ABC), set 656e3a323532` 字符
 
@@ -249,18 +249,6 @@ NVRAM -> Add -> 7C436110-AB2A-4BBB-A880-FE41995C9F82-> boot-args -> 加入 ` -ig
 - ` -igfxvesa` 仅作调试用途，不建议在工作环境下使用
 
 后续接入独立显卡，调试完成独立显卡后，可删除 ` -igfxvesa`
-
-## 修复音频
-查看 [AppleALC](https://github.com/acidanthera/AppleALC) 以找到与 `Realtek® ALC1220P` 同型号或相近型号的编解码器
-
-ALC1220 修订和布局分别为 `0x100101, 0x100003, layout 1, 2, 3, 5, 7, 11, 13, 15, 16, 17, 21, 27, 28, 29, 30, 34, 35, 98, 99, 100`  <br>
-ALC1220 最小内核为 `12 (10.8)`
-
-重启系统, 屏幕左上角苹果图标，系统偏好设置，声音, 检查声音是否正常
-
-修改 config.plist 内的 `NVRAM` -> Add -> 7C436110-AB2A-4BBB-A880-FE41995C9F82-> boot-args -> `alcid` （举例 `1` , `2` , `3` , `5` , `7` , `11`）
-
-视情况删除或修改 `DeviceProperties` -> Add -> `PciRoot(0x0)/Pci(0x1b,0x0)` 条目
 
 ## 修复USB
 
