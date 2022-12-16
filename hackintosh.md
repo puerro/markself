@@ -180,7 +180,7 @@ Misc -> Debug -> ApplePanic -> true  <br>
 Misc -> Debug -> DisableWatchDog -> true  <br>
 Misc -> Debug -> Target -> `3` （若需文件形式输出日志信息，则改为 `67`）  <br>
 Misc -> Security -> AllowSetDefault -> true  <br>
-Misc -> Security -> ScanPolicy -> `0`（[Opencore ScanPolicy Generator](https://github.com/i3p9/oc-scanpolicy) 生成所需的值，Opencore建议值为 `17760515`）  <br>
+Misc -> Security -> ScanPolicy -> `19858179`（[Opencore ScanPolicy Generator](https://github.com/i3p9/oc-scanpolicy) 生成所需的值，Opencore建议值为 `17760515`）  <br>
 Misc -> Security -> SecureBootModel -> `j185f`  <br>
 Misc -> Security -> Vault -> `Optional`
 
