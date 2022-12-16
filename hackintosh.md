@@ -157,8 +157,8 @@ DeviceProperties -> Add -> 右键 `PciRoot(0x0)/Pci(0x1F,0x3)` 条目 -> 在 `Pc
 DeviceProperties -> 右键 `Add` 条目 -> 在 `Add` 条目下创建 `PciRoot(0x0)/Pci(0x1B,0x2)/Pci(0x0,0x0)` Dictionary  <br>
 DeviceProperties -> Add -> 右键 `PciRoot(0x0)/Pci(0x1B,0x2)/Pci(0x0,0x0)` 条目 -> 在 `PciRoot(0x0)/Pci(0x1B,0x2)/Pci(0x0,0x0)` 条目下创建 `device-id` Data -> 值为 `F2150000`
 
-DeviceProperties -> 右键 `Add` 条目 -> 在 `Add` 条目下创建 `` Dictionary  <br>
-DeviceProperties -> Add -> 右键 `` 条目 -> 在 `` 条目下创建 `shikigva` Number -> 80  <br>
+DeviceProperties -> 右键 `Add` 条目 -> 在 `Add` 条目下创建 ` ` Dictionary  <br>
+DeviceProperties -> Add -> 右键 ` ` 条目 -> 在 ` ` 条目下创建 `shikigva` Number -> 80
 
 Kernel -> Patch -> 右键 `Patch` 条目 -> 在 `Patch` 条目下创建一个新的条目 Dictionary  <br>
 Kernel -> Patch -> 新条目 -> 右键新条目 -> 在新条目下创建 `Base` String -> 值为 `__Z18e1000_set_mac_typeP8e1000_hw`  <br>
