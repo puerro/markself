@@ -217,7 +217,7 @@ UEFI -> Input -> PointerSupportMode -> ``
 
 选择 `Erase` ，重命名为 `Macintosh HD`，格式为 `APFS`，点击 `Erase`
 
-回到恢复主界面，点击 `Reinstall macOS`、`Continue`、`Install`、`Install`
+回到恢复主界面，点击 `Reinstall macOS`、`Continue`
 
 选择系统硬盘，点击 `Install`
 
