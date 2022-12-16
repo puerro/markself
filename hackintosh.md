@@ -157,6 +157,16 @@ DeviceProperties -> Add -> 右键 `PciRoot(0x0)/Pci(0x1F,0x3)` 条目 -> 在 `Pc
 DeviceProperties -> 右键 `Add` 条目 -> 在 `Add` 条目下创建 `PciRoot(0x0)/Pci(0x1B,0x2)/Pci(0x0,0x0)` Dictionary  <br>
 DeviceProperties -> Add -> 右键 `PciRoot(0x0)/Pci(0x1B,0x2)/Pci(0x0,0x0)` 条目 -> 在 `PciRoot(0x0)/Pci(0x1B,0x2)/Pci(0x0,0x0)` 条目下创建 `device-id` Data -> 值为 `F2150000`
 
+Kernel -> Patch -> 右键 `Patch` 条目 -> 在 `Patch` 条目下创建 `Base` String -> 值为 `__Z18e1000_set_mac_typeP8e1000_hw`  <br>
+Kernel -> Patch -> 右键 `Patch` 条目 -> 在 `Patch` 条目下创建 `Comment` String -> 值为 `I225-V patch`  <br>
+Kernel -> Patch -> 右键 `Patch` 条目 -> 在 `Patch` 条目下创建 `Count` Number -> 值为 `1`  <br>
+Kernel -> Patch -> 右键 `Patch` 条目 -> 在 `Patch` 条目下创建 `Enabled` Boolean -> True  <br>
+Kernel -> Patch -> 右键 `Patch` 条目 -> 在 `Patch` 条目下创建 `Find` Data -> 值为 `F2150000`  <br>
+Kernel -> Patch -> 右键 `Patch` 条目 -> 在 `Patch` 条目下创建 `Identifier` String -> 值为 `com.apple.driver.AppleIntelI210Ethernet`  <br>
+Kernel -> Patch -> 右键 `Patch` 条目 -> 在 `Patch` 条目下创建 `MinKernel` String -> 值为 `19.0.0`  <br>
+Kernel -> Patch -> 右键 `Patch` 条目 -> 在 `Patch` 条目下创建 `MaxKernel` String -> 值为 `20.4.0`  <br>
+Kernel -> Patch -> 右键 `Patch` 条目 -> 在 `Patch` 条目下创建 `Replace` Data -> 值为 `F3150000`  <br>
+
 Kernel -> Quirks -> PanicNoKextDump -> true  <br>
 Kernel -> Quirks -> PowerTimeoutKernelPanic -> true  <br>
 Kernel -> Quirks -> XhciPortLimit -> true （运行 MacOS 11.3+ 则false）
