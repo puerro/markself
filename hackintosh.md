@@ -22,7 +22,7 @@
 - ~~Execute Disable Bit~~
 - EHCI/XHCI Hand-off
 - OS type: Windows 8.1/10 UEFI Mode
-- DVMT Pre-Allocated(iGPU Memory): 64MB (least)
+- DVMT Pre-Allocated(iGPU Memory): 64MB (至少)
 - SATA Mode: AHCI
 
 # 前置Windows步骤
