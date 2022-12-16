@@ -163,7 +163,7 @@ DeviceProperties -> Add -> 右键 ` ` 条目 -> 在 ` ` 条目下创建 `shikigv
 Kernel -> Patch -> 右键 `Patch` 条目 -> 在 `Patch` 条目下创建一个新的条目 Dictionary  <br>
 Kernel -> Patch -> 新条目 -> 右键新条目 -> 在新条目下创建 `Base` String -> 值为 `__Z18e1000_set_mac_typeP8e1000_hw`  <br>
 Kernel -> Patch -> 新条目 -> 右键新条目 -> 在新条目下创建 `Comment` String -> 值为 `I225-V patch`  <br>
-Kernel -> Patch -> 新条目 -> 右键新条目 -> 在新条目下创建 `Count` Number -> 值为 `1`  <br>
+Kernel -> Patch -> 新条目 -> 右键新条目 -> 在新条目下创建 `Count` Number -> 1  <br>
 Kernel -> Patch -> 新条目 -> 右键新条目 -> 在新条目下创建 `Enabled` Boolean -> True  <br>
 Kernel -> Patch -> 新条目 -> 右键新条目 -> 在新条目下创建 `Find` Data -> 值为 `F2150000`  <br>
 Kernel -> Patch -> 新条目 -> 右键新条目 -> 在新条目下创建 `Identifier` String -> 值为 `com.apple.driver.AppleIntelI210Ethernet`  <br>
