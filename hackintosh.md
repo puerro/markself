@@ -257,10 +257,13 @@ UEFI -> Input -> PointerSupportMode -> ``
 
 ~~重启系统并测试 HDMI~~
 
-因为10代CPU (Comet Lake) 搭配Z590系列主板，在MacOS下无法驱动板载视频输出，  <br>
-所以HDMI接口与DP接口都不能正常地输出视频信号，  <br>
-NVRAM -> Add -> 7C436110-AB2A-4BBB-A880-FE41995C9F82-> boot-args -> 加入 ` -igfxvesa`  <br>
-无独显情况下加入 ` -igfxvesa` 以进入系统进行调试等设置，HDMI与DP均能显示，**无需定制、修复**，**也无法修复**（但显存为7MB）  <br>
+因为10代CPU (Comet Lake) 搭配Z590系列主板，在MacOS下无法驱动板载视频输出，
+
+所以HDMI接口与DP接口都不能正常地输出视频信号，
+
+NVRAM -> Add -> 7C436110-AB2A-4BBB-A880-FE41995C9F82-> boot-args -> 加入 ` -igfxvesa`
+
+无独显情况下加入 ` -igfxvesa` 以进入系统进行调试等设置，HDMI与DP均能显示，**无需定制、修复**，**也无法修复**（但显存为7MB）
 - 强制 GPU 进入 VESA 模式（无 GPU 加速），对故障排除很有用
 - ` -igfxvesa` 仅作调试用途，不建议在工作环境下使用
 
