@@ -148,9 +148,11 @@ Booter -> Quirks -> SyncRuntimePermissions -> true
 
 DeviceProperties -> 删除 `PciRoot(0x0)/Pci(0x1b,0x0)` 条目与 `layout-id`=`01000000` 字符  <br>
 DeviceProperties -> 右键 `Add` 条目 -> 在 `Add` 条目下创建 `PciRoot(0x0)/Pci(0x2,0x0)` Dictionary  <br>
-DeviceProperties -> Add -> 右键 `PciRoot(0x0)/Pci(0x2,0x0)` 条目 -> 在 `PciRoot(0x0)/Pci(0x2,0x0)` 条目下创建 `AAPL,ig-platform-id` Data -> 值为 `0300C89B`
-- AAPL,ig-platform-id = `00009B3E` 是集显输出，独显输出则设置为 `0300C89B`
-- `framebuffer-patch-enable` 与 `framebuffer-stolenmem` 需要 BIOS 内的 `DVMT Pre-Allocated` 少于 64MB 或者没有该选项
+DeviceProperties -> Add -> 右键 `PciRoot(0x0)/Pci(0x2,0x0)` 条目 -> 在 `PciRoot(0x0)/Pci(0x2,0x0)` 条目下创建 `AAPL,ig-platform-id` Data -> 值为 `0300C59B`
+- 核显输出请查看 [修复HDMI](#修复HDMI)
+- `framebuffer-patch-enable` 与 `framebuffer-stolenmem` 需要 BIOS 内的 `DVMT Pre-Allocated` 实际少于 64MB 或者没有该选项
+
+DeviceProperties -> Add -> 右键 `PciRoot(0x0)/Pci(0x2,0x0)` 条目 -> 在 `PciRoot(0x0)/Pci(0x2,0x0)` 条目下创建 `device-id` Data -> 值为 `C59B0000`
 
 DeviceProperties -> 右键 `Add` 条目 -> 在 `Add` 条目下创建 `PciRoot(0x0)/Pci(0x1F,0x3)` Dictionary  <br>
 DeviceProperties -> Add -> 右键 `PciRoot(0x0)/Pci(0x1F,0x3)` 条目 -> 在 `PciRoot(0x0)/Pci(0x1F,0x3)` 条目下创建 `layout-id` Data -> 值为 `0B000000`  <br>
@@ -240,7 +242,7 @@ UEFI -> Input -> PointerSupportMode -> ``
 
 # 修复
 
-## ~~修复HDMI~~
+## 修复HDMI
 >~~DP总线类型：2、4、5、6  <br>~~
 >~~HDMI总线类型：1、2、4、6~~
 
@@ -255,10 +257,10 @@ UEFI -> Input -> PointerSupportMode -> ``
 
 ~~重启系统并测试 HDMI~~
 
-因为10代CPU (Comet Lake) 搭配Z590系列主板无法驱动板载视频输出，  <br>
+因为10代CPU (Comet Lake) 搭配Z590系列主板，在MacOS下无法驱动板载视频输出，  <br>
 所以HDMI接口与DP接口都不能正常地输出视频信号，  <br>
 NVRAM -> Add -> 7C436110-AB2A-4BBB-A880-FE41995C9F82-> boot-args -> 加入 ` -igfxvesa`  <br>
-加入 ` -igfxvesa` 以进入系统进行调试等设置，HDMI与DP均能显示，**无需定制、修复**，**也无法修复**（但显存为7MB）  <br>
+无独显情况下加入 ` -igfxvesa` 以进入系统进行调试等设置，HDMI与DP均能显示，**无需定制、修复**，**也无法修复**（但显存为7MB）  <br>
 - 强制 GPU 进入 VESA 模式（无 GPU 加速），对故障排除很有用
 - ` -igfxvesa` 仅作调试用途，不建议在工作环境下使用
 
