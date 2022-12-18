@@ -186,7 +186,7 @@ Misc -> Security -> ScanPolicy -> `19858179`（[Opencore ScanPolicy Generator](h
 Misc -> Security -> SecureBootModel -> `j185f`  <br>
 Misc -> Security -> Vault -> `Optional`
 
-NVRAM -> Add -> 7C436110-AB2A-4BBB-A880-FE41995C9F82-> boot-args -> `-v debug=0x100 keepsyms=1 dk.e1000=0 e1000=0 agdpmod=pikera`  <br>
+NVRAM -> Add -> 7C436110-AB2A-4BBB-A880-FE41995C9F82-> boot-args -> `-v keepsyms=1 debug=0x100 dk.e1000=0 e1000=0 agdpmod=pikera`  <br>
 NVRAM -> Add -> 7C436110-AB2A-4BBB-A880-FE41995C9F82-> prev-lang:kbd -> `656E2D55533A30`
 - 删除 `#INFO (prev-lang:kbd)` 条目与 `en:252 (ABC), set 656e3a323532` 字符
 
