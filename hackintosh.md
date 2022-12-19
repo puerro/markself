@@ -183,7 +183,7 @@ Misc -> Debug -> DisableWatchDog -> true  <br>
 Misc -> Debug -> Target -> `3` （若需文件形式输出日志信息，则改为 `67`）  <br>
 Misc -> Security -> AllowSetDefault -> true  <br>
 Misc -> Security -> ScanPolicy -> `0`（[Opencore ScanPolicy Generator](https://github.com/i3p9/oc-scanpolicy) 生成所需的值，Opencore建议值为 `17760515`）  <br>
-Misc -> Security -> SecureBootModel -> `j185f`  <br>
+Misc -> Security -> SecureBootModel -> `j185`  <br>
 Misc -> Security -> Vault -> `Optional`
 
 NVRAM -> Add -> 7C436110-AB2A-4BBB-A880-FE41995C9F82-> boot-args -> `-v keepsyms=1 debug=0x100 dk.e1000=0 e1000=0 agdpmod=pikera`  <br>
@@ -192,7 +192,7 @@ NVRAM -> Add -> 7C436110-AB2A-4BBB-A880-FE41995C9F82-> prev-lang:kbd -> `656E2D5
 
 PlatformInfo -> Generic -> MLB ->   <br>
 PlatformInfo -> Generic -> ROM ->   <br>
-PlatformInfo -> Generic -> SystemProductName -> `iMac20,2`  <br>
+PlatformInfo -> Generic -> SystemProductName -> `iMac20,1`  <br>
 PlatformInfo -> Generic -> SystemSerialNumber ->   <br>
 PlatformInfo -> Generic -> SystemUUID -> 
 
