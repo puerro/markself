@@ -150,7 +150,7 @@ DeviceProperties -> 删除 `PciRoot(0x0)/Pci(0x1b,0x0)` 条目与 `layout-id`=`0
 DeviceProperties -> 右键 `Add` 条目 -> 在 `Add` 条目下创建 `PciRoot(0x0)/Pci(0x2,0x0)` Dictionary  <br>
 DeviceProperties -> Add -> 右键 `PciRoot(0x0)/Pci(0x2,0x0)` 条目 -> 在 `PciRoot(0x0)/Pci(0x2,0x0)` 条目下创建 `AAPL,ig-platform-id` Data -> 值为 `0300C59B`
 - 核显输出请查看 [修复HDMI](#修复HDMI)
-- `framebuffer-patch-enable` 与 `framebuffer-stolenmem` 需要 BIOS 内的 `DVMT Pre-Allocated` 实际少于 64MB 或者没有该选项
+- `framebuffer-stolenmem` 需要 BIOS 内的 `DVMT Pre-Allocated` 实际少于 64MB 或者没有该选项
 
 DeviceProperties -> Add -> 右键 `PciRoot(0x0)/Pci(0x2,0x0)` 条目 -> 在 `PciRoot(0x0)/Pci(0x2,0x0)` 条目下创建 `device-id` Data -> 值为 `C59B0000`
 
