@@ -98,6 +98,7 @@
 |     Lilu      |  1.6.2  |
 | WhateverGreen |  1.6.2  |
 |    AppleALC   |  1.7.7  |
+|    NVMeFix    |  1.1.0  |
 | CtlnaAHCIPort |    -    |
 
 [VirtualSMC](https://github.com/acidanthera/VirtualSMC)
@@ -113,6 +114,8 @@
 
 [USBInjectAll](https://bitbucket.org/RehabMan/os-x-usb-inject-all/downloads)（自OpenCore 0.7.4后不再适配）
 - USB定制后可删除
+
+[NVMeFix](https://github.com/acidanthera/NVMeFix)
 
 [CtlnaAHCIPort](#Big-Sur-修复)
 
@@ -178,7 +181,7 @@ Kernel -> Patch -> 新条目 -> 右键新条目 -> 在新条目下创建 `Replac
 
 Kernel -> Quirks -> PanicNoKextDump -> true  <br>
 Kernel -> Quirks -> PowerTimeoutKernelPanic -> true  <br>
-Kernel -> Quirks -> XhciPortLimit -> true （运行 MacOS 11.3+ 则false）
+Kernel -> Quirks -> XhciPortLimit -> true （运行 MacOS 11.3+ 则false，定制完USB也可以false）
 
 Misc -> Debug -> AppleDebug -> true  <br>
 Misc -> Debug -> ApplePanic -> true  <br>
