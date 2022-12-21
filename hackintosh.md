@@ -98,6 +98,7 @@
 |     Lilu      |  1.6.2  |
 | WhateverGreen |  1.6.2  |
 |    AppleALC   |  1.7.7  |
+| AppleAHCIPort |    -    |
 
 [VirtualSMC](https://github.com/acidanthera/VirtualSMC)
 - VirtualSMC.kext
@@ -112,6 +113,8 @@
 
 [USBInjectAll](https://bitbucket.org/RehabMan/os-x-usb-inject-all/downloads)（自OpenCore 0.7.4后不再适配）
 - USB定制后可删除
+
+[AppleAHCIPort](#Big Sur 修复)
 
 ~~[AirportBrcmFixup](https://github.com/acidanthera/AirportBrcmFixup)~~
 - ~~强制使用 `brcmfx-driver=` 加载特定的驱动程序可能会有所帮助~~
@@ -283,8 +286,8 @@ Kernel -> Quirks -> XhciPortLimit -> false
 
 SATA 支持受损
 - 由于 Apple 在 AppleAHCIPort.kext 中 删除了 AppleIntelPchSeriesAHCI 类
+- 不能进行SATA热插拔
 - 解决这一问题，添加 Catalina 的补丁 [AppleAHCIPort.kext](https://github.com/dortania/OpenCore-Install-Guide/blob/master/extra-files/CtlnaAHCIPort.kext.zip) 并将 `MinKernel` 设为 `20.0.0`
-- 不能进行SATA热插拔，**Monterey 系统似乎不需要修复**（未测试，没有SATA设备）
 
 # Monterey 修复
 >[BrcmPatchRAM](https://github.com/acidanthera/BrcmPatchRAM)
