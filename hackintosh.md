@@ -99,7 +99,6 @@
 | WhateverGreen |  1.6.2  |
 |    AppleALC   |  1.7.7  |
 |    NVMeFix    |  1.1.0  |
-| CtlnaAHCIPort |    -    |
 
 [VirtualSMC](https://github.com/acidanthera/VirtualSMC)
 - VirtualSMC.kext
@@ -117,7 +116,7 @@
 
 [NVMeFix](https://github.com/acidanthera/NVMeFix)
 
-[CtlnaAHCIPort](#Big-Sur-修复)
+~~[CtlnaAHCIPort](#Big-Sur-修复)~~
 
 ~~[AirportBrcmFixup](https://github.com/acidanthera/AirportBrcmFixup)~~
 - ~~强制使用 `brcmfx-driver=` 加载特定的驱动程序可能会有所帮助~~
@@ -291,6 +290,7 @@ SATA 支持受损
 - 由于 Apple 在 AppleAHCIPort.kext 中 删除了 AppleIntelPchSeriesAHCI 类
 - 不能进行SATA热插拔
 - 解决这一问题，添加 Catalina 的补丁[CtlnaAHCIPort.kext](https://github.com/dortania/OpenCore-Install-Guide/blob/master/extra-files/CtlnaAHCIPort.kext.zip)（ AppleAHCIPort.kext）并将 `MinKernel` 设为 `20.0.0`
+- 笔记本电脑在Big Sur下，在MacOS中无法看到 SATA 硬盘驱动器的话，可以考虑使用
 
 # Monterey 修复
 >[BrcmPatchRAM](https://github.com/acidanthera/BrcmPatchRAM)
