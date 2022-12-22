@@ -287,7 +287,7 @@ Kernel -> Quirks -> XhciPortLimit -> false
 
 SATA 支持受损
 - 由于 Apple 在 AppleAHCIPort.kext 中 删除了 AppleIntelPchSeriesAHCI 类
-- 解决这一问题，添加 Catalina 的补丁[CtlnaAHCIPort.kext](https://github.com/dortania/OpenCore-Install-Guide/blob/master/extra-files/CtlnaAHCIPort.kext.zip)（ AppleAHCIPort.kext）并将 `MinKernel` 设为 `20.0.0`
+- 解决这一问题，添加 Catalina 的补丁[CtlnaAHCIPort.kext](https://github.com/dortania/OpenCore-Install-Guide/blob/master/extra-files/CtlnaAHCIPort.kext.zip)（AppleAHCIPort.kext）并将 `MinKernel` 设为 `20.0.0`
 - 常见于笔记本电脑在Big Sur及更新的系统版本[?]，在MacOS中不识别内置 SATA 硬盘驱动器的话，可以考虑使用；建议在不使用的环境下测试
 - 使用该kext后不能进行SATA热插拔
 
@@ -295,14 +295,14 @@ SATA 支持受损
 >[BrcmPatchRAM](https://github.com/acidanthera/BrcmPatchRAM)
 
 BrcmBluetoothInjector.kext
-- 如果仍然启动 Big Sur 及更早版本的系统，应在 config.plist 中将该 kext 的 `MaxKernel` 字段设置 `20.99.9`（默认为 ``）
+- 如果仍然启动 Big Sur 及更早版本的系统，应在 config.plist 中将该 kext 的 `MaxKernel` 字段设置 `20.99.9`
 
 保留 BrcmFirmwareData.kext  <br>
 保留 BrcmPatchRAM3.kext
 
 加入  <br>
 [BlueToolFixup](https://github.com/acidanthera/BrcmPatchRAM)
-- 如果仍然启动 Big Sur 及更早版本的系统，应在 config.plist 中将该 kext 的 `MinKernel` 字段设置 `21.00.0` （默认为 ``）以防止在旧系统上加载 BlueToolFixup
+- 如果仍然启动 Big Sur 及更早版本的系统，应在 config.plist 中将该 kext 的 `MinKernel` 字段设置 `21.00.0` 以防止在旧系统上加载 BlueToolFixup
 
 # 其他
 
