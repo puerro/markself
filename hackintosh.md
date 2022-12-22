@@ -22,7 +22,7 @@
 - ~~Execute Disable Bit~~
 - EHCI/XHCI Hand-off
 - OS type: Windows 8.1/10 UEFI Mode
-- DVMT Pre-Allocated(iGPU Memory): 64MB
+- DVMT Pre-Allocated(iGPU Memory): 64MB 或 更高
 - SATA Mode: AHCI
 
 # 前置Windows步骤
@@ -306,3 +306,12 @@ BrcmBluetoothInjector.kext
 - 如果仍然启动 Big Sur 及更早版本的系统，应在 config.plist 中将该 kext 的 `MinKernel` 字段设置 `21.00.0` （默认为 ``）以防止在旧系统上加载 BlueToolFixup
 
 # 其他
+
+## 修复Windows时间
+更改Windows注册表
+
+`Reg add HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsUniversal /t REG_DWORD /d 1`
+
+恢复Windows注册表
+
+`Reg add HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsUniversal /t REG_DWORD /d 0`
