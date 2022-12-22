@@ -12,12 +12,11 @@
 - ~~Intel SGX~~
 - Intel Platform Trust
 - CFG Lock （MSR 0xE2 写入保护）（**黑苹果无法在启用CFG-Lock时启动。**）
-  - **这必须关闭，如果找不到该选项则需要启用 `Kernel` -> `Quirks` 下的`AppleXcpmCfgLock` 。**
+  - **这必须关闭，如果找不到该选项则需要启用 `Kernel` -> `Quirks` 下的`AppleXcpmCfgLock` **
 
 ## 开启
 - VT-x
 - Above 4G decoding
-  - 2020年+ BIOS 注意：启用 Above4G 时，Resizable BAR Support 可能会在某些Z490和更新的主板上可用。如果启用，请确保将 Booter -> Quirks -> ResizeAppleGpuBars 设置为 `0` 。
 - Hyper-Threading
 - ~~Execute Disable Bit~~
 - EHCI/XHCI Hand-off
