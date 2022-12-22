@@ -267,7 +267,7 @@ UEFI -> Input -> PointerSupportMode -> ``
 
 NVRAM -> Add -> 7C436110-AB2A-4BBB-A880-FE41995C9F82-> boot-args -> 加入 ` -igfxvesa igfxonln=1`
 
-无独显情况下加入 ` -igfxvesa igfxonln=1` 以进入系统进行调试等设置，HDMI与DP均能显示，**无需定制、修复**，**也无法修复**（但显存为7MB）
+**无独显情况下**加入 ` -igfxvesa igfxonln=1` 以进入系统进行调试等设置，HDMI与DP均能显示，**无需定制、修复**，**也无法修复**（但显存为7MB）
 - ` -igfxvesa igfxonln=1` 仅作调试用途，排除故障，不建议在工作环境下使用
 
 后续接入独立显卡，调试完成独立显卡后，可删除 ` -igfxvesa igfxonln=1`
