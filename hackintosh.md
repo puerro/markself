@@ -11,8 +11,8 @@
 - Thunderbolt (对于初始安装，如果未正确设置，Thunderbolt 可能会导致问题）
 - ~~Intel SGX~~
 - Intel Platform Trust
-- CFG Lock （MSR 0xE2 写入保护）（**黑苹果无法在启用CFG-Lock时启动。**）
-  - **这必须关闭，如果找不到该选项则需要启用 `Kernel` -> `Quirks` 下的`AppleXcpmCfgLock` **
+- CFG Lock （MSR 0xE2 写入保护）（**黑苹果无法在启用CFG-Lock时启动**）
+  - **这必须关闭，如果找不到该选项则需要启用 `Kernel` -> `Quirks` 下的`AppleXcpmCfgLock`**
 
 ## 开启
 - VT-x
@@ -287,9 +287,9 @@ Kernel -> Quirks -> XhciPortLimit -> false
 
 SATA 支持受损
 - 由于 Apple 在 AppleAHCIPort.kext 中 删除了 AppleIntelPchSeriesAHCI 类
-- 不能进行SATA热插拔
 - 解决这一问题，添加 Catalina 的补丁[CtlnaAHCIPort.kext](https://github.com/dortania/OpenCore-Install-Guide/blob/master/extra-files/CtlnaAHCIPort.kext.zip)（ AppleAHCIPort.kext）并将 `MinKernel` 设为 `20.0.0`
-- 笔记本电脑在Big Sur下，在MacOS中无法看到 SATA 硬盘驱动器的话，可以考虑使用
+- 常见于笔记本电脑在Big Sur及更新的系统版本[?]，在MacOS中不识别内置 SATA 硬盘驱动器的话，可以考虑使用；建议在不使用的环境下测试
+- 使用该kext后不能进行SATA热插拔
 
 # Monterey 修复
 >[BrcmPatchRAM](https://github.com/acidanthera/BrcmPatchRAM)
