@@ -70,6 +70,8 @@
 运行时需要输入系统恢复镜像的文件路径
 
 # OpenCore
+[OpenCore](https://github.com/acidanthera/OpenCorePkg)
+
 解压提取 `X64` 目录下的 `EFI` 文件夹
 
 `BOOT` 文件夹内删除 `.contentFlavour` 文件
