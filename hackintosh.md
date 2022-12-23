@@ -288,6 +288,7 @@ NVRAM -> Add -> 7C436110-AB2A-4BBB-A880-FE41995C9F82-> boot-args -> 加入 ` -ig
 - 强制使用 `brcmfx-driver=` 加载特定的驱动程序可能会有所帮助
   - 以 BCM94352Z 为例，可能需要在 `boot-args` 中 使用`brcmfx-driver=2` 解决问题，其他芯片组将需要其他参数
 
+## XhciPortLimit
 Kernel -> Quirks -> XhciPortLimit -> false
 
 ## SATA 支持受损
