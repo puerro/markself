@@ -27,12 +27,12 @@
 # 前置Windows步骤
 
 ## 7-Zip or Bandizip
-[7-Zip](https://www.7-zip.org){:target="_blank"}
+[7-Zip](https://www.7-zip.org)
 
-[Bandizip](https://www.bandisoft.com){:target="_blank"}
+[Bandizip](https://www.bandisoft.com)
 
 ## Python
-[Python](https://www.python.org){:target="_blank"}
+[Python](https://www.python.org)
 
 # DSDT
 
