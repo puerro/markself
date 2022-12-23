@@ -262,9 +262,9 @@ UEFI -> Input -> PointerSupportMode -> ``
 
 ~~重启系统并测试 HDMI~~
 
-因为10代CPU (Comet Lake) 搭配Z590系列主板，在MacOS下无法驱动板载视频输出，
+因为10代CPU (Comet Lake) 搭配Z590系列主板，在MacOS下无法驱动板载视频输出
 
-所以HDMI接口与DP接口都不能正常地输出视频信号，
+所以HDMI接口与DP接口都不能正常地输出视频信号
 
 NVRAM -> Add -> 7C436110-AB2A-4BBB-A880-FE41995C9F82-> boot-args -> 加入 ` -igfxvesa igfxonln=1`
 
@@ -279,14 +279,18 @@ NVRAM -> Add -> 7C436110-AB2A-4BBB-A880-FE41995C9F82-> boot-args -> 加入 ` -ig
 
 重启系统并且测试
 
+## 修复开机提示音
+
+[修复开机提示音](https://dortania.github.io/OpenCore-Post-Install/cosmetic/gui.html)
+
 # Big Sur 修复
-AirportBrcmFixup
+## AirportBrcmFixup
 - 强制使用 `brcmfx-driver=` 加载特定的驱动程序可能会有所帮助
   - 以 BCM94352Z 为例，可能需要在 `boot-args` 中 使用`brcmfx-driver=2` 解决问题，其他芯片组将需要其他参数
 
 Kernel -> Quirks -> XhciPortLimit -> false
 
-SATA 支持受损
+## SATA 支持受损
 - 由于 Apple 在 AppleAHCIPort.kext 中 删除了 AppleIntelPchSeriesAHCI 类
 - 解决这一问题，添加 Catalina 的补丁[CtlnaAHCIPort.kext](https://github.com/dortania/OpenCore-Install-Guide/blob/master/extra-files/CtlnaAHCIPort.kext.zip)（AppleAHCIPort.kext）并将 `MinKernel` 设为 `20.0.0`
 - 常见于笔记本电脑在Big Sur及更新的系统版本[?]，在MacOS中不识别内置 SATA 硬盘驱动器的话，可以考虑使用；建议在不使用的环境下测试
