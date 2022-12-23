@@ -54,8 +54,6 @@
 
 回到主菜单，选择 `RTCAWAC` 生成 `SSDT-RTCAWAC.aml`、`SSDT-RTCAWAC.dsl` 文件
 
-回到主菜单，选择 `USB Reset` 生成 `SSDT-USB-Reset.aml`、`SSDT-USB-Reset.dsl` 文件
-
 # U盘
 ## 工具
 下载 [gibMacOS](https://github.com/corpnewt/gibMacOS)
@@ -81,7 +79,7 @@
 视情况删除 `OC` 文件夹内的 `Resources` 文件夹
 
 ## ACPI
-将 `SSDT-PLUG.aml`、`SSDT-EC.aml`、`SSDT-USBX.aml`、`SSDT-RTCAWAC.aml`、`SSDT-USB-Reset.aml` 移动到 `ACPI` 目录
+将 `SSDT-PLUG.aml`、`SSDT-EC.aml`、`SSDT-USBX.aml`、`SSDT-RTCAWAC.aml` 移动到 `ACPI` 目录
 
 ## Drivers
 只留下 `AudioDxe.efi`、`OpenRuntime.efi` 文件，其他的都删掉
@@ -156,7 +154,8 @@ DeviceProperties -> Add -> 右键 `PciRoot(0x0)/Pci(0x2,0x0)` 条目 -> 在 `Pci
 - 核显输出请查看 [修复HDMI](#修复HDMI)
 - `framebuffer-stolenmem` 需要 BIOS 内的 `DVMT Pre-Allocated` 实际少于 64MB 或者没有该选项
 
-DeviceProperties -> Add -> 右键 `PciRoot(0x0)/Pci(0x2,0x0)` 条目 -> 在 `PciRoot(0x0)/Pci(0x2,0x0)` 条目下创建 `device-id` Data -> 值为 `C59B0000`
+DeviceProperties -> Add -> 右键 `PciRoot(0x0)/Pci(0x2,0x0)` 条目 -> 在 `PciRoot(0x0)/Pci(0x2,0x0)` 条目下创建 `device-id` Data -> 值为 `C59B0000`  <br>
+DeviceProperties -> Add -> 右键 `PciRoot(0x0)/Pci(0x2,0x0)` 条目 -> 在 `PciRoot(0x0)/Pci(0x2,0x0)` 条目下创建 `framebuffer-patch-enable` Data -> 值为 `01000000`
 
 DeviceProperties -> 右键 `Add` 条目 -> 在 `Add` 条目下创建 `PciRoot(0x0)/Pci(0x1F,0x3)` Dictionary  <br>
 DeviceProperties -> Add -> 右键 `PciRoot(0x0)/Pci(0x1F,0x3)` 条目 -> 在 `PciRoot(0x0)/Pci(0x1F,0x3)` 条目下创建 `layout-id` Data -> 值为 `0B000000`  <br>
