@@ -44,7 +44,9 @@
 ### 提取文件
 >愿原力与你同在
 
-运行 `SSDTTime.bat` ，选择 `Dump DSDT` 生成 `DSDT.aml` 文件
+运行 `SSDTTime.bat` 
+
+选择 `Dump DSDT` 生成 `DSDT.aml` 文件（前置步骤，必须）
 
 回到主菜单，选择 `FakeEC` 生成 `SSDT-EC.aml`、`SSDT-EC.dsl` 文件
 
