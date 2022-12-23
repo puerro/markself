@@ -139,7 +139,7 @@
 
 运行 `ProperTree.bat` -> `File` -> `Open` -> 选择 `EFI/OC/config.plist`
 
-删除所有 `#WARNING` 字符
+删除顶部所有 `#WARNING` 条目
 
 点击 `File` -> `OC Clean Snapshot` -> 选择 `EFI/OC` 目录
 
@@ -203,7 +203,7 @@ PlatformInfo -> Generic -> SystemUUID ->
 
 UEFI -> APFS -> MinDate -> `20200306`  <br>
 UEFI -> APFS -> MinVersion -> `1412101001000000`  <br>
-UEFI -> Audio -> AudioDevide -> ``  <br>
+UEFI -> Audio -> AudioDevice -> ``  <br>
 UEFI -> Audio -> AudioOutMask -> `-1`  <br>
 UEFI -> Audio -> PlayChime -> `Auto`  <br>
 
