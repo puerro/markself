@@ -56,7 +56,7 @@
 
 # U盘
 ## 工具
-下载 [gibMacOS](https://github.com/corpnewt/gibMacOS)
+[gibMacOS](https://github.com/corpnewt/gibMacOS)
 
 运行 `gibMacOS.bat`，选择 `Toggle Recovery-Only` ，选择带有 `- FULL Install` 字样的选项下载系统恢复镜像
 
@@ -139,9 +139,9 @@
 
 运行 `ProperTree.bat` -> `File` -> `Open` -> 选择 `EFI/OC/config.plist`
 
-点击 `File` -> `OC Clean Snapshot` -> 选择 `EFI/OC` 目录
-
 删除所有 `#WARNING` 字符
+
+点击 `File` -> `OC Clean Snapshot` -> 选择 `EFI/OC` 目录
 
 Booter -> Quirks -> DevirtualiseMmio -> true  <br>
 Booter -> Quirks -> EnableWriteUnprotector -> false  <br>
