@@ -24,6 +24,9 @@
 - DVMT Pre-Allocated(iGPU Memory): 64MB 或 更高
 - SATA Mode: AHCI
 
+## 雷电
+![](bios-thunderbolt-setting.png)
+
 # 前置Windows步骤
 
 ## 7-Zip or Bandizip
