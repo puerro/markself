@@ -102,7 +102,7 @@
 |     Lilu      |  1.6.2  |
 | WhateverGreen |  1.6.2  |
 |    AppleALC   |  1.7.7  |
-|    NVMeFix    |  1.1.0  |
+|  ~~NVMeFix~~  |~~1.1.0~~|
 
 [VirtualSMC](https://github.com/acidanthera/VirtualSMC)
 - VirtualSMC.kext
@@ -119,7 +119,7 @@
 - 黑果小兵版[USBInjectAll](https://github.com/daliansky/OS-X-USB-Inject-All)（适用500系主板）
 - USB定制后可删除
 
-[NVMeFix](https://github.com/acidanthera/NVMeFix)
+~~[NVMeFix](https://github.com/acidanthera/NVMeFix)~~
 
 ~~[CtlnaAHCIPort](#Big-Sur-修复)~~
 
