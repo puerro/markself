@@ -116,6 +116,7 @@
 [AppleALC](https://github.com/acidanthera/AppleALC)
 
 [USBInjectAll](https://bitbucket.org/RehabMan/os-x-usb-inject-all/downloads)（自OpenCore 0.7.4后不再适配）
+- 黑果小兵版[USBInjectAll](https://github.com/daliansky/OS-X-USB-Inject-All)（适用500系主板）
 - USB定制后可删除
 
 [NVMeFix](https://github.com/acidanthera/NVMeFix)
