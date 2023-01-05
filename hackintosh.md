@@ -97,9 +97,9 @@
 |:-------------:|:-------:|
 |  **OpenCore** |**0.8.7**|
 |   VirtualSMC  |  1.3.0  |
-|     Lilu      |  1.6.2  |
-| WhateverGreen |  1.6.2  |
-|    AppleALC   |  1.7.7  |
+|     Lilu      |  1.6.3  |
+| WhateverGreen |  1.6.3  |
+|    AppleALC   |  1.7.8  |
 |  ~~NVMeFix~~  |~~1.1.0~~|
 
 [VirtualSMC](https://github.com/acidanthera/VirtualSMC)
@@ -113,7 +113,7 @@
 
 [AppleALC](https://github.com/acidanthera/AppleALC)
 
-[USBInjectAll](https://bitbucket.org/RehabMan/os-x-usb-inject-all/downloads)（自OpenCore 0.7.4后不再适配）
+~~[USBInjectAll](https://bitbucket.org/RehabMan/os-x-usb-inject-all/downloads)~~（自OpenCore 0.7.4后不再适配）
 - 黑果小兵版[USBInjectAll](https://github.com/daliansky/OS-X-USB-Inject-All)（适用500系主板）
 - USB定制后可删除
 
