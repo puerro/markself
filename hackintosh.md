@@ -79,11 +79,9 @@
 
 解压提取 `X64` 目录下的 `EFI` 文件夹
 
-`BOOT` 文件夹内删除 `.contentFlavour` 文件
+视情况删除 `BOOT` 文件夹内 `.contentFlavour`、`.contentVisibility` 文件
 
-`OC` 文件夹内删除 `.contentFlavour` 文件
-
-视情况删除 `OC` 文件夹内的 `Resources` 文件夹
+视情况删除 `OC` 文件夹内 `.contentFlavour`、`.contentVisibility` 文件
 
 ## ACPI
 将 `SSDT-PLUG.aml`、`SSDT-EC.aml`、`SSDT-USBX.aml`、`SSDT-RTCAWAC.aml` 移动到 `ACPI` 目录
