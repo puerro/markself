@@ -207,9 +207,9 @@ PlatformInfo -> Generic -> SystemUUID ->
 
 UEFI -> APFS -> MinDate -> `20200306`  <br>
 UEFI -> APFS -> MinVersion -> `1412101001000000`  <br>
-UEFI -> Audio -> AudioDevice -> ``  <br>
+UEFI -> Audio -> AudioDevice -> `PciRoot(0x0)/Pci(0x1F,0x3)`  <br>
 UEFI -> Audio -> AudioOutMask -> `-1`  <br>
-UEFI -> Audio -> PlayChime -> `Auto`  <br>
+UEFI -> Audio -> PlayChime -> `Enabled`  <br>
 
 UEFI -> Input -> PointerSupportMode -> ``
 
