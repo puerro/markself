@@ -69,10 +69,12 @@
 
 ## 插入U盘
 
+**U盘设置为GPT格式**
+
 ## 写入U盘
 >愿原力与你同在
 
-运行 `MakeInstall.bat`，选择U盘
+运行 `MakeInstall.bat`，选择U盘序号，加上`Format as GPT (default is MBR).`选项字母
 
 运行时需要输入系统恢复镜像的文件路径
 
@@ -193,7 +195,7 @@ Misc -> Debug -> ApplePanic -> true  <br>
 Misc -> Debug -> DisableWatchDog -> true  <br>
 Misc -> Debug -> Target -> `3` （若需文件形式输出日志信息，则改为 `67`）  <br>
 Misc -> Security -> AllowSetDefault -> true  <br>
-Misc -> Security -> ScanPolicy -> `0`（[Opencore ScanPolicy Generator](https://github.com/i3p9/oc-scanpolicy) 生成所需的值，Opencore建议值为 `17760515`）  <br>
+Misc -> Security -> ScanPolicy -> `19858179`（[Opencore ScanPolicy Generator](https://github.com/i3p9/oc-scanpolicy) 生成所需的值，Opencore建议值为 `17760515`，调试值可为`0`）  <br>
 Misc -> Security -> SecureBootModel -> `j185`  <br>
 Misc -> Security -> Vault -> `Optional`
 
