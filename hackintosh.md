@@ -99,11 +99,11 @@
 
 |     Name      | Version |
 |:-------------:|:-------:|
-|  **OpenCore** |**0.8.8**|
+|  **OpenCore** |**0.8.9**|
 |   VirtualSMC  |  1.3.0  |
 |     Lilu      |  1.6.3  |
-| WhateverGreen |  1.6.3  |
-|    AppleALC   |  1.7.8  |
+| WhateverGreen |  1.6.4  |
+|    AppleALC   |  1.7.9  |
 |  ~~NVMeFix~~  |~~1.1.0~~|
 
 [VirtualSMC](https://github.com/acidanthera/VirtualSMC)
