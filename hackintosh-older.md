@@ -20,7 +20,7 @@
 - Hyper-Threading
 - ~~Execute Disable Bit~~
 - EHCI/XHCI Hand-off
-- OS type: Windows 8.1/10 UEFI Mode
+- ~~OS type: Windows 8.1/10 UEFI Mode~~
 - DVMT Pre-Allocated(iGPU Memory): 64MB 或 更高
 - SATA Mode: AHCI
 
