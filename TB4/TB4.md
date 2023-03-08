@@ -11,9 +11,11 @@
 
 您应该会在随附的屏幕截图中看到类似的内容。
 ![](TB4-2047.png)
+
 找到 Thunderbolt 节点后，您可以清除搜索以获取完整的节点信息。
 ![](TB4-2048.png)
-如果您查看，在上面的屏幕截图中，我们列出了一些 Thunderbolt 和 USB 连接器。您需要找到驱动与 Thunderbolt 连接的当前连接器。找出这一点的一个简单方法是使用 AppleThunderboltHAL 找到具有 Thunderbolt 属性的连接器。在我们的例子中，它是 PCI0/RP05/PXSX。您的系统可以有不同的系统。确保找到正确的位置。
+
+如果您检查一下，在上面的屏幕截图中，我们列出了一些 Thunderbolt 和 USB 连接器。您需要找到驱动与 Thunderbolt 连接的当前连接器。找出这一点的一个简单方法是使用 AppleThunderboltHAL 找到具有 Thunderbolt 属性的连接器。在我们的例子中，它是 PCI0/RP05/PXSX。您的系统可能不同。确保找到正确的位置。
 
 ### 对于多卡：
 获取多卡的 ACPI 路径可能比单卡和板载 Thunderbolt 有点复杂。要查找多张卡的 ACPI 路径，请按照下面列出的步骤操作。
@@ -25,8 +27,10 @@
 
 **For Slot #2**
 >RP21. PXSX
+
 **For Slot #3**
 >PC01.BR1A.SL01
+
 **For Slot #5**
 >PC03.BR3A.SL09
 
@@ -34,6 +38,7 @@
 
 **For Slot #3**
 >PC01.BR1A.PEGP
+
 **For Slot #5**
 >PC03.BR3A.PEGP
 
@@ -43,6 +48,7 @@
 1. 在您的网络浏览器中打开HackinDROM网站。
 2. 从下拉列表中选择您的 Thunderbolt 控制器。
 3. 您将看到可用主板和 AIC 的列表，如下面的屏幕截图所示。该列表可能会发生变化。
+
 ![](TB4-3065.png)
 
 ### 对于单卡和板载 Thunderbolt：
@@ -52,3 +58,4 @@
 如果您有多个 Thunderbolt 卡，该过程与板载和单个 Thunderbolt 卡略有不同。
 
 1. 从列表中选择合适的 AIC 型号。
+
