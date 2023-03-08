@@ -59,7 +59,7 @@
 
 回到主菜单，选择 `RTCAWAC` 生成 `SSDT-RTCAWAC.aml`、`SSDT-RTCAWAC.dsl` 文件
 
-回到主菜单，选择 `USB Reset` 生成 `SSDT-USB-Reset.aml`、`SSDT-USB-Reset.dsl` 文件
+~~回到主菜单，选择 `USB Reset` 生成 `SSDT-USB-Reset.aml`、`SSDT-USB-Reset.dsl` 文件~~
 
 # U盘
 ## 工具
@@ -88,7 +88,7 @@
 视情况删除 `OC` 文件夹内 `.contentFlavour`、`.contentVisibility` 文件
 
 ## ACPI
-将 `SSDT-PLUG.aml`、`SSDT-EC.aml`、`SSDT-USBX.aml`、`SSDT-RTCAWAC.aml`、`SSDT-USB-Reset.aml` 移动到 `ACPI` 目录
+将 `SSDT-PLUG.aml`、`SSDT-EC.aml`、`SSDT-USBX.aml`、`SSDT-RTCAWAC.aml`~~、`SSDT-USB-Reset.aml`~~ 移动到 `ACPI` 目录
 
 ## Drivers
 只留下 `AudioDxe.efi`、`OpenRuntime.efi` 文件，其他的都删掉
@@ -97,14 +97,16 @@
 
 ## Kexts
 
-|     Name      | Version |
-|:-------------:|:-------:|
-|  **OpenCore** |**0.8.9**|
-|   VirtualSMC  |  1.3.0  |
-|     Lilu      |  1.6.3  |
-| WhateverGreen |  1.6.4  |
-|    AppleALC   |  1.7.9  |
-|  ~~NVMeFix~~  |~~1.1.0~~|
+|       Name       | Version |
+|:----------------:|:-------:|
+|   **OpenCore**   |**0.8.9**|
+|     VirtualSMC   |  1.3.0  |
+|       Lilu       |  1.6.3  |
+|   WhateverGreen  |  1.6.4  |
+|     AppleALC     |  1.7.9  |
+|   USBInjectAll   |    -    |
+| XHCI-unsupported |    -    |
+|    ~~NVMeFix~~   |~~1.1.0~~|
 
 [VirtualSMC](https://github.com/acidanthera/VirtualSMC)
 - VirtualSMC.kext
@@ -117,8 +119,11 @@
 
 [AppleALC](https://github.com/acidanthera/AppleALC)
 
-~~[USBInjectAll](https://bitbucket.org/RehabMan/os-x-usb-inject-all/downloads)~~（自OpenCore 0.7.4后不再适配）
-- 黑果小兵版[USBInjectAll](https://github.com/daliansky/OS-X-USB-Inject-All)（适用500系主板）
+[USBInjectAll](https://bitbucket.org/RehabMan/os-x-usb-inject-all/downloads)（自OpenCore 0.7.4后不再适配）
+- 黑果小兵版[USBInjectAll](https://github.com/daliansky/OS-X-USB-Inject-All)（适用500系、600系[?]主板）
+- USB定制后可删除
+
+[XHCI-unsupported](https://github.com/RehabMan/OS-X-USB-Inject-All)
 - USB定制后可删除
 
 ~~[NVMeFix](https://github.com/acidanthera/NVMeFix)~~
