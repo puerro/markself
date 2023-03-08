@@ -217,6 +217,8 @@ UEFI -> Audio -> PlayChime -> `Enabled`  <br>
 UEFI -> Input -> PointerSupportMode -> ``
 
 #### 修改序列号
+[GenSMBIOS](https://github.com/corpnewt/GenSMBIOS)
+
 PlatformInfo -> Generic -> MLB ->   <br>
 PlatformInfo -> Generic -> ROM ->   <br>
 PlatformInfo -> Generic -> SystemProductName -> `iMac20,1`  <br>
