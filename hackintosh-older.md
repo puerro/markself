@@ -119,7 +119,7 @@
 
 [AppleALC](https://github.com/acidanthera/AppleALC)
 
-[USBInjectAll](https://bitbucket.org/RehabMan/os-x-usb-inject-all/downloads)（自OpenCore 0.7.4后不再适配）
+[USBInjectAll](https://bitbucket.org/RehabMan/os-x-usb-inject-all/downloads)
 - 黑果小兵版[USBInjectAll](https://github.com/daliansky/OS-X-USB-Inject-All)（适用500系、600系[?]主板）
 - USB定制后可删除
 
