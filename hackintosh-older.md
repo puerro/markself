@@ -25,7 +25,7 @@
 - SATA Mode: AHCI
 
 ## 雷电
-![](bios-thunderbolt-setting.png)
+![](thunderbolt-setting.png)
 
 # 前置Windows步骤
 
