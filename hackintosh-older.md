@@ -53,9 +53,9 @@
 
 回到主菜单，选择 `FakeEC` 生成 `SSDT-EC.aml`、`SSDT-EC.dsl` 文件
 
-回到主菜单，选择 `PluginType` 生成 `SSDT-PLUG.aml`、`SSDT-PLUG.dsl` 文件
-
 回到主菜单，选择 `USBX` 生成 `SSDT-USBX.aml`、`SSDT-USBX.dsl` 文件
+
+回到主菜单，选择 `PluginType` 生成 `SSDT-PLUG.aml`、`SSDT-PLUG.dsl` 文件
 
 回到主菜单，选择 `RTCAWAC` 生成 `SSDT-RTCAWAC.aml`、`SSDT-RTCAWAC.dsl` 文件
 
