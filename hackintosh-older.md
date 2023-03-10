@@ -100,10 +100,10 @@
 |       Name       | Version |
 |:----------------:|:-------:|
 |   **OpenCore**   |**0.9.0**|
-|     VirtualSMC   |  1.3.0  |
-|       Lilu       |  1.6.3  |
+|     VirtualSMC   |  1.3.1  |
+|       Lilu       |  1.6.4  |
 |   WhateverGreen  |  1.6.4  |
-|     AppleALC     |  1.7.9  |
+|     AppleALC     |  1.8.0  |
 |   USBInjectAll   |    -    |
 | XHCI-unsupported |    -    |
 |    ~~NVMeFix~~   |~~1.1.0~~|
