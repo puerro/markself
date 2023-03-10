@@ -91,7 +91,7 @@
 将 `SSDT-PLUG.aml`、`SSDT-EC.aml`、`SSDT-USBX.aml`、`SSDT-RTCAWAC.aml`~~、`SSDT-USB-Reset.aml`~~ 移动到 `ACPI` 目录
 
 ## Drivers
-只留下 `AudioDxe.efi`、`OpenRuntime.efi` 文件，其他的都删掉
+只留下 `AudioDxe.efi`、`OpenCanopy.efi`、`OpenRuntime.efi` 文件，其他的都删掉
 
 在 `Drivers` 目录下，下载 [HfsPlus.efi](https://github.com/acidanthera/OcBinaryData/blob/master/Drivers/HfsPlus.efi)
 
@@ -322,8 +322,7 @@ BrcmBluetoothInjector.kext
 保留 BrcmFirmwareData.kext  <br>
 保留 BrcmPatchRAM3.kext
 
-加入  <br>
-[BlueToolFixup](https://github.com/acidanthera/BrcmPatchRAM)
+加入 [BlueToolFixup](https://github.com/acidanthera/BrcmPatchRAM)
 - 如果仍然启动 Big Sur 及更早版本的系统，应在 config.plist 中将该 kext 的 `MinKernel` 字段设置 `21.00.0` 以防止在旧系统上加载 BlueToolFixup
 
 # 其他
