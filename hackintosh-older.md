@@ -99,7 +99,7 @@
 
 |       Name       | Version |
 |:----------------:|:-------:|
-|   **OpenCore**   |**0.8.9**|
+|   **OpenCore**   |**0.9.0**|
 |     VirtualSMC   |  1.3.0  |
 |       Lilu       |  1.6.3  |
 |   WhateverGreen  |  1.6.4  |
