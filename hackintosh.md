@@ -114,7 +114,7 @@
 
 [AppleALC](https://github.com/acidanthera/AppleALC)
 
-~~[USBInjectAll](https://bitbucket.org/RehabMan/os-x-usb-inject-all/downloads)~~（自OpenCore 0.7.4后不再适配）
+[USBInjectAll](https://bitbucket.org/RehabMan/os-x-usb-inject-all/downloads)
 - USB定制后可删除
 
 ~~[NVMeFix](https://github.com/acidanthera/NVMeFix)~~
@@ -299,8 +299,7 @@ BrcmBluetoothInjector.kext
 保留 BrcmFirmwareData.kext  <br>
 保留 BrcmPatchRAM3.kext
 
-加入  <br>
-[BlueToolFixup](https://github.com/acidanthera/BrcmPatchRAM)
+加入 [BlueToolFixup](https://github.com/acidanthera/BrcmPatchRAM)
 - 如果仍然启动 Big Sur 及更早版本的系统，应在 config.plist 中将该 kext 的 `MinKernel` 字段设置 `21.00.0` 以防止在旧系统上加载 BlueToolFixup
 
 # 其他
