@@ -327,6 +327,16 @@ BrcmBluetoothInjector.kext
 
 # 其他
 
+## 蓝牙流畅度改善方法
+- 2.4G WIFI网络频段与蓝牙存在信号冲突，条件允许的可以关掉路由2.4G信号频段
+  - 关掉WIFI可以验证这个问题
+- 在设置—网络—左下角设置—设定服务排序—将蓝牙拖至第一个
+- 提升蓝牙默认比特率，执行以下几条命令
+  - `defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" 35`
+  - `defaults write com.apple.BluetoothAudioAgent "Apple Initial Bitpool Min (editable)" 53`
+  - `defaults write com.apple.BluetoothAudioAgent "Apple Initial Bitpool (editable)" 35`
+- 内置天线的，尽量将两条天线分开一些
+
 ## 修复Windows时间
 更改Windows注册表
 
