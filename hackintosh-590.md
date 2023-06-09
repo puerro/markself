@@ -348,3 +348,10 @@ BrcmBluetoothInjector.kext
 恢复Windows注册表
 
 `Reg add HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsUniversal /t REG_DWORD /d 0`
+
+## Windows下双物理硬盘屏蔽另一硬盘
+更改Windows注册表
+
+`HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\partmgr\Parameters` 
+
+SanPolicy -> 值为 `4` (16进制HEX，默认值为`1`)
