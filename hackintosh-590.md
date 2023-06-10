@@ -349,7 +349,7 @@ BrcmBluetoothInjector.kext
 
 `Reg add HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsUniversal /t REG_DWORD /d 0`
 
-## Windows下双物理硬盘屏蔽另一硬盘
+## Windows下多物理硬盘，屏蔽非本系统硬盘
 更改Windows注册表
 
 `HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\partmgr\Parameters` 
