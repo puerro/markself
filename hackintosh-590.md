@@ -59,7 +59,7 @@
 
 回到主菜单，选择 `RTCAWAC` 生成 `SSDT-RTCAWAC.aml`、`SSDT-RTCAWAC.dsl` 文件
 
-~~回到主菜单，选择 `USB Reset` 生成 `SSDT-USB-Reset.aml`、`SSDT-USB-Reset.dsl` 文件~~
+回到主菜单，选择 `USB Reset` 生成 `SSDT-USB-Reset.aml`、`SSDT-USB-Reset.dsl` 文件
 
 # U盘
 ## 工具
@@ -88,7 +88,7 @@
 视情况删除 `OC` 文件夹内 `.contentFlavour`、`.contentVisibility` 文件
 
 ## ACPI
-将 `SSDT-PLUG.aml`、`SSDT-EC.aml`、`SSDT-USBX.aml`、`SSDT-RTCAWAC.aml`~~、`SSDT-USB-Reset.aml`~~ 移动到 `ACPI` 目录
+将 `SSDT-PLUG.aml`、`SSDT-EC.aml`、`SSDT-USBX.aml`、`SSDT-RTCAWAC.aml`、`SSDT-USB-Reset.aml` 移动到 `ACPI` 目录
 
 ## Drivers
 只留下 `AudioDxe.efi`、`OpenCanopy.efi`、`OpenRuntime.efi` 文件，其他的都删掉
