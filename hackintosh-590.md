@@ -222,11 +222,11 @@ UEFI -> Input -> PointerSupportMode -> ``
 #### 修改序列号
 [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS)
 
-PlatformInfo -> Generic -> MLB ->   <br>
+PlatformInfo -> Generic -> MLB -> (Board Serial)  <br>
 PlatformInfo -> Generic -> ROM ->   <br>
 PlatformInfo -> Generic -> SystemProductName -> `iMac20,1`  <br>
-PlatformInfo -> Generic -> SystemSerialNumber ->   <br>
-PlatformInfo -> Generic -> SystemUUID -> 
+PlatformInfo -> Generic -> SystemSerialNumber -> (Serial)  <br>
+PlatformInfo -> Generic -> SystemUUID -> (SmUUID)
 
 ## 替换文件
 移动或替换 `EFI` 文件夹到U盘
