@@ -71,7 +71,7 @@
 ## 写入U盘
 >愿原力与你同在
 
-运行 `MakeInstall.bat`，选择U盘序号，加上`Format as GPT (default is MBR).`选项字母
+运行 `MakeInstall.bat`，选择U盘序号，~~加上`Format as GPT (default is MBR).`选项字母~~
 
 运行时需要输入系统恢复镜像的文件路径
 
