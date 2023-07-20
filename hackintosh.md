@@ -96,12 +96,11 @@
 
 |     Name      | Version |
 |:-------------:|:-------:|
-|  **OpenCore** |**0.8.9**|
-|   VirtualSMC  |  1.3.0  |
-|     Lilu      |  1.6.3  |
-| WhateverGreen |  1.6.4  |
-|    AppleALC   |  1.7.9  |
-|  ~~NVMeFix~~  |~~1.1.0~~|
+|  **OpenCore** |**0.9.3**|
+|   VirtualSMC  |  1.3.2  |
+|     Lilu      |  1.6.6  |
+| WhateverGreen |  1.6.5  |
+|    AppleALC   |  1.8.3  |
 
 [VirtualSMC](https://github.com/acidanthera/VirtualSMC)
 - VirtualSMC.kext
@@ -168,9 +167,6 @@ DeviceProperties -> Add -> 右键 `PciRoot(0x0)/Pci(0x1F,0x3)` 条目 -> 在 `Pc
 DeviceProperties -> 右键 `Add` 条目 -> 在 `Add` 条目下创建 `PciRoot(0x0)/Pci(0x1C,0x4)/Pci(0x0,0x0)` Dictionary  <br>
 DeviceProperties -> Add -> 右键 `PciRoot(0x0)/Pci(0x1C,0x4)/Pci(0x0,0x0)` 条目 -> 在 `PciRoot(0x0)/Pci(0x1C,0x4)/Pci(0x0,0x0)` 条目下创建 `device-id` Data -> 值为 `F2150000`
 
-DeviceProperties -> 右键 `Add` 条目 -> 在 `Add` 条目下创建 `PciRoot(0x0)/Pci(0x1,0x0)/Pci(0x0,0x0)/Pci(0x0,0x0)/Pci(0x0,0x0)` Dictionary  <br>
-DeviceProperties -> Add -> 右键 `PciRoot(0x0)/Pci(0x1,0x0)/Pci(0x0,0x0)/Pci(0x0,0x0)/Pci(0x0,0x0)` 条目 -> 在 `PciRoot(0x0)/Pci(0x1,0x0)/Pci(0x0,0x0)/Pci(0x0,0x0)/Pci(0x0,0x0)` 条目下创建 `shikigva` Number -> 80
-
 Kernel -> Patch -> 右键 `Patch` 条目 -> 在 `Patch` 条目下创建一个新的条目 Dictionary  <br>
 Kernel -> Patch -> 新条目 -> 右键新条目 -> 在新条目下创建 `Base` String -> 值为 `__Z18e1000_set_mac_typeP8e1000_hw`  <br>
 Kernel -> Patch -> 新条目 -> 右键新条目 -> 在新条目下创建 `Comment` String -> 值为 `I225-V patch`  <br>
@@ -192,18 +188,12 @@ Misc -> Debug -> DisableWatchDog -> true  <br>
 Misc -> Debug -> Target -> `3` （若需文件形式输出日志信息，则改为 `67`）  <br>
 Misc -> Security -> AllowSetDefault -> true  <br>
 Misc -> Security -> ScanPolicy -> `19858179`（[Opencore ScanPolicy Generator](https://github.com/i3p9/oc-scanpolicy) 生成所需的值，Opencore建议值为 `17760515`，调试值可为`0`）  <br>
-Misc -> Security -> SecureBootModel -> `j185`  <br>
+Misc -> Security -> SecureBootModel -> `j174`  <br>
 Misc -> Security -> Vault -> `Optional`
 
-NVRAM -> Add -> 7C436110-AB2A-4BBB-A880-FE41995C9F82-> boot-args -> `-v keepsyms=1 debug=0x100 dk.e1000=0 e1000=0 agdpmod=pikera`  <br>
+NVRAM -> Add -> 7C436110-AB2A-4BBB-A880-FE41995C9F82-> boot-args -> `-v keepsyms=1 debug=0x100 dk.e1000=0 e1000=0`  <br>
 NVRAM -> Add -> 7C436110-AB2A-4BBB-A880-FE41995C9F82-> prev-lang:kbd -> `656E2D55533A30`
 - 删除 `#INFO (prev-lang:kbd)` 条目与 `en:252 (ABC), set 656e3a323532` 字符
-
-PlatformInfo -> Generic -> MLB ->   <br>
-PlatformInfo -> Generic -> ROM ->   <br>
-PlatformInfo -> Generic -> SystemProductName -> `iMac20,1`  <br>
-PlatformInfo -> Generic -> SystemSerialNumber ->   <br>
-PlatformInfo -> Generic -> SystemUUID -> 
 
 UEFI -> APFS -> MinDate -> `20200306`  <br>
 UEFI -> APFS -> MinVersion -> `1412101001000000`  <br>
@@ -212,6 +202,15 @@ UEFI -> Audio -> AudioOutMask -> `-1`  <br>
 UEFI -> Audio -> PlayChime -> `Enabled`  <br>
 
 UEFI -> Input -> PointerSupportMode -> ``
+
+#### 修改序列号
+[GenSMBIOS](https://github.com/corpnewt/GenSMBIOS)
+
+PlatformInfo -> Generic -> MLB -> (Board Serial)  <br>
+PlatformInfo -> Generic -> ROM ->   <br>
+PlatformInfo -> Generic -> SystemProductName -> `Macmini8,1`  <br>
+PlatformInfo -> Generic -> SystemSerialNumber -> (Serial)  <br>
+PlatformInfo -> Generic -> SystemUUID -> (SmUUID)
 
 ## 替换文件
 移动或替换 `EFI` 文件夹到U盘
