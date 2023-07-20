@@ -88,7 +88,7 @@
 将 `SSDT-PLUG.aml`、`SSDT-EC.aml`、`SSDT-USBX.aml`、`SSDT-RTCAWAC.aml`、`SSDT-USB-Reset.aml` 移动到 `ACPI` 目录
 
 ## Drivers
-只留下 `AudioDxe.efi`、`OpenRuntime.efi` 文件，其他的都删掉
+只留下 `AudioDxe.efi`、`OpenCanopy.efi`、`OpenRuntime.efi` 文件，其他的都删掉
 
 在 `Drivers` 目录下，下载 [HfsPlus.efi](https://github.com/acidanthera/OcBinaryData/blob/master/Drivers/HfsPlus.efi)
 
