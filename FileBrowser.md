@@ -27,7 +27,7 @@ Default install in `/usr/local/bin`
 `filebrowser -d filebrowser.db config set --log /usr/local/bin/filebrowser.log`
 
 ### Set root directory (option)
->Don't set together with *WorkingDirectory*, or set a same directory
+>Don't set together with *WorkingDirectory* in system service, or set a same directory
 
 `filebrowser -d filebrowser.db config set --root /`
 
