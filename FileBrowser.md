@@ -61,11 +61,14 @@ Restart=on-failure
 WantedBy=multi-user.target
 ```
 
-```
-sudo systemctl daemon-reload
-sudo systemctl status filebrowser.service
-sudo systemctl start filebrowser.service
-sudo systemctl stop filebrowser.service
-sudo systemctl enable filebrowser.service
-sudo systemctl restart filebrowser.service
-```
+`sudo systemctl daemon-reload`
+
+`sudo systemctl status filebrowser.service`
+
+`sudo systemctl start filebrowser.service`
+
+`sudo systemctl stop filebrowser.service`
+
+`sudo systemctl enable filebrowser.service`
+
+`sudo systemctl restart filebrowser.service`
