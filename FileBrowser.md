@@ -2,7 +2,9 @@
 
 ## Install
 
-`curl -fsSL https://raw.githubusercontent.com/filebrowser/get/master/get.sh | bash`
+```
+curl -fsSL https://raw.githubusercontent.com/filebrowser/get/master/get.sh | bash
+```
 
 Default install in `/usr/local/bin`
 
