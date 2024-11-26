@@ -32,7 +32,7 @@ Default install in `/usr/local/bin`
 `filebrowser -d filebrowser.db config set --root /`
 
 ### Set user and password. --perm.admin set user be admin
-`filebrowser -d filebrowser.db users add user password --perm.admin`
+`filebrowser -d filebrowser.db users add <user> <password> --perm.admin`
 
 ### Config info
 `filebrowser -d filebrowser.db config cat`
